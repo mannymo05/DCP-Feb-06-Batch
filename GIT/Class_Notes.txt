@@ -1,0 +1,429 @@
+DCP-Feb-06-Batch
+
+######
+Day-1
+######
+		Introduction to DevOps
+		Why DevOps ??
+		
+		SDLC Process ??
+		Software 
+		
+		SDLC -- Software Development Life Cycle
+		
+		Develop a software Application :
+					Desktop
+					Web
+					Mobile 
+		
+		Free-lance Web Developer :::
+			Create a E-Commerce website and host in web servers 
+			
+		SDLC 
+			Requirement Analysis
+			Design
+			Code & Development 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Process ::: 
+			Create a E-Commerce website and host in web servers - 6months
+			
+		Water-fall Model ---			Linear Approach.
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+		
+		New CR : 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Agile Methodilogies :::
+		
+			Modules / Iterations ::::
+			Create a E-Commerce website and host in web servers - 6months
+		
+		Module-1 / Iteration 1	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Module-2 / Iteration 2	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring		
+
+		Module-3 / Iteration 3	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		3 Modules --> deployment 
+		
+		
+		DevOps 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		Agile vs DevOps ::::
+		
+		Create a E-Commerce website and host in web servers
+		
+		5 to 10 ???
+		
+		Application :::
+		
+			Monolith Application Architecture ===> 
+			
+			Micro-service based Architecture
+			
+			Create a E-Commerce website and host in web servers
+			www.amazon.com
+			
+			End-user ::
+				
+				Sign-up							Miroservice --> independently create/work on this, test & deploy to prod.
+				Sign-In
+				Search for products
+				Add to cart
+				Place the order 
+				Make Payment
+				Confirm Order
+				Track order
+				
+				New Feature ---> independently create/work on this, test & deploy to prod.
+				
+				
+		Developer !!!
+		
+		
+		DevOps Strategy ::: 
+			Why ???
+
+		SDLC :::
+		
+			Business Analyst / Application Architects --
+			
+			Infra-Structure Team			-- 	Provision and configure the servers
+			Development Team				--	Develop the code -- Coding...
+			Testing Team 					-- 	Testing QA,UAT
+			Release Management Team			-- 	Ensure the product release on time
+			Production Support Team 		--	support the real appln.
+			Production Monitoring Team 		-- 	Monitor the production servers & Applications running production envrionment
+			
+			Continuous Development 		--->> 
+				developer1 -- java web application --> 		create the scr code - perform build - create artifacts - unit test.
+								
+								signup.jsp ==> build (Compile the src code & Create artifacts(binaries)*.war/*.jar/*.dll/*.exec)
+												
+				
+								Using Eclipse based IDE for coding
+								Visual Studio Code  IDE
+								Visual Studio 
+								Pycharm
+			
+			Environments ::::
+			
+			Non-Production Environment								Production Environment
+			
+				DEV	  - develop 											PROD  
+				BUILD - build
+				TEST
+					QA 
+					UAT 
+					
+			Continuous Integration   
+				===> Automation of build (Compile the src code & Create artifacts(binaries) & integrate for testing
+				
+			Continuous Delivery
+				
+			Continuous Testing 				
+			
+			Continuous Deployment
+			
+			Continuous Monitoring
+			
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			Continuous Delivery   --> Need Manual Approval for Prod Release 
+			
+			Continuous Deployment --> Automated Prod Release --> zero downtime Kubernetes
+			
+			
+		Applications :::
+		
+			amazon
+			facebook
+			netflix ......
+			
+		Ins/finance domain
+		
+			DevOps Strategy :::
+			
+			Release any new feature/product 
+			
+			dependencies.
+			
+			create a deployment window ::: 4 - 6hrs
+			
+			Continuous Delivery
+			
+
+		Continuous testing ::
+		
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			
+		Finance Domain
+		
+		Telecomm Domain ;;
+		
+				SP1 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.
+				SP2 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.	
+
+Adhoc Request ::: eod: DEV,testing,rm -- need severs 
+				
+			test servers.
+			
+		Jenkins to automate... 	terraform, ansible...
+			
+			
+			
+			
+		Continuous Monitoring	
+		
+			Create a E-Commerce website and host in web servers --- End-users are using this portal.
+					No. of users   10000 users -- 20000 
+					Infra-Structure - health status.
+					Security attacks 
+					
+					
+			Infra-Structure Monitoring --->  Promethus/Grafana
+			
+			Application Monitoring AppDynamics
+			
+			
+		DevOps Architects
+		DevOps Engineers 
+		
+	
+			People 
+			process -->  DevOps Strategies 
+			tools   --> 
+			
+########
+Day-2
+########
+
+			Lab Environment 
+			Version Control System Using GIT.
+
+		DevOps Tools :::
+		
+			Open-Source Tools ---> Self-Managed Tools 
+			
+				jenkins 
+			
+			DevOps Managed Services/Tools --- 
+				AWS / Az / GCP 
+				
+				
+		AWS Cloud Platform :::   				-- 	Free Tier Account! 12 Months.
+			Virtual Machines ::::					EC2 Instances - Linux 
+				Install all the devops tools. 	
+
+		AWS free - tier account
+		
+		github.com   -- Remote Repository
+		
+		dockerhub.com
+		
+		Visual Studio Code 			https://code.visualstudio.com/download		
+		MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+			https://mobaxterm.mobatek.net/download.html
+
+
+Tasks::			
+		1. Create Github Account.	
+		2. Create AWS Free-tier.		https://aws.amazon.com/console/
+		3. Visual Studio Code 			https://code.visualstudio.com/download		
+		4. MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+										https://mobaxterm.mobatek.net/download.html		
+		
+		
+		
+		Repository 	-- Collection of Folders and files. 
+					-- Version Control.
+					
+					
+		sync-fork
+		
+
+Version Control System Using GIT ::::
+
+		Version Control System ::::
+		
+		Development Environment ::::
+				Coding & Development --->
+				
+				Developer1  	-> 			signin.jsp 
+					IDE -- Visual Studio Code / Eclipse 
+					
+					signin.jsp -- saved ..
+					
+					incremental Changes ---> 
+					
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					
+				VCS ---> 
+				
+					signin.jsp -- save -- v1.0
+					signin.jsp -- save -- v1.1
+					signin.jsp -- save -- v1.2
+					signin.jsp -- save -- v1.3
+					signin.jsp -- save -- v1.4
+					signin.jsp -- save -- v1.5
+					signin.jsp -- save -- v1.6   =>>>
+					
+					versions / commit_id / tags 
+					
+				Version Control System :::
+				
+					-	Is used to version control the source code 
+					-	Used to Track the changes
+					
+					-	Used to perform Parallel Development.
+						using Branch. 
+				
+				Repository	-- Is a collection of Files and Folders which are version controlled by GIT.
+				
+					
+		Free-lance web Developer!!!
+		
+				Creating the Project
+					
+					E_Commerce_xyz Project Folder	  -- Local Repo.				
+						index.jsp
+						validation.java
+					
+				Centralize VCS --->  google docs - web service 
+				
+		10-lines		index.jsp ---> saved & commited the file to git repo -- Commit_id - v1.0
+										save & 
+										
+			
+		DevOps == 
+		
+			-	Install GIT & Administration https://git-scm.com/downloads
+			
+			-	Git work flow 
+			
+			-	Git Branching Strategies 
+			
+		
+		GIT Work Flow :::	
+		
+		
+			Local Repository 	(Local Machine)													Remote Repository (Remote Servers)
+			
+			New index.jsp -- save in local machine & version control in local machine	====>   Remote Repo index.jsp
+																						Push TO 	
+
+			index.jsp
+				func1
+				func2
+				func3
+
+		
+		Installion of GIT -- in Dev Environment		https://git-scm.com/downloads	
+		
+				VS Code , GIT 
+				
+					Window -- Install GIT 			-- Git Bash (CLU) , GIT GUI 
+					Linux
+					Mac 		
+		
+		Workload :::
+		
+			Create a New Projects
+			Change Request - Enhance Projects
+			Bug fixing 
+			
+			
+		Open GIT Bash ::
+		
+			d: 
+			
+			cd d: 
+			mkdir Home_Dir
+			cd Home_Dir
+			mkdir Project_Repo1
+			cd Project_Repo1
+				git repo1
+			
+			
+		GIT BASH :: - CLU 
+
+		Create local repo.
+		
+		git init ==> Initialize Local Repository & Create a default branch(master/main)
+		
+		Create the files 
+		
+		git add 
+		
+		git commit 
+			
+			
+Summary ::
+		
+		Tasks::			
+		1. Create Github Account.	
+		2. Create AWS Free-tier.		https://aws.amazon.com/console/
+		3. Visual Studio Code 			https://code.visualstudio.com/download		
+		4. MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+										https://mobaxterm.mobatek.net/download.html		
+		
+		5. Installion of GIT -- in Dev Environment		https://git-scm.com/downloads			
+				VS Code , GIT 
+					Window -- Install GIT 			-- Git Bash (CLU) , GIT GUI 			
