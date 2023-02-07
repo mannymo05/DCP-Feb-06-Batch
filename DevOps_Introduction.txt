@@ -1,0 +1,280 @@
+DCP-Feb-06-Batch
+
+######
+Day-1
+######
+		Introduction to DevOps
+		Why DevOps ??
+		
+		SDLC Process ??
+		Software 
+		
+		SDLC -- Software Development Life Cycle
+		
+		Develop a software Application :
+					Desktop
+					Web
+					Mobile 
+		
+		Free-lance Web Developer :::
+			Create a E-Commerce website and host in web servers 
+			
+		SDLC 
+			Requirement Analysis
+			Design
+			Code & Development 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Process ::: 
+			Create a E-Commerce website and host in web servers - 6months
+			
+		Water-fall Model ---			Linear Approach.
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+		
+		New CR : 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Agile Methodilogies :::
+		
+			Modules / Iterations ::::
+			Create a E-Commerce website and host in web servers - 6months
+		
+		Module-1 / Iteration 1	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Module-2 / Iteration 2	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring		
+
+		Module-3 / Iteration 3	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		3 Modules --> deployment 
+		
+		
+		DevOps 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		Agile vs DevOps ::::
+		
+		Create a E-Commerce website and host in web servers
+		
+		5 to 10 ???
+		
+		Application :::
+		
+			Monolith Application Architecture ===> 
+			
+			Micro-service based Architecture
+			
+			Create a E-Commerce website and host in web servers
+			www.amazon.com
+			
+			End-user ::
+				
+				Sign-up							Miroservice --> independently create/work on this, test & deploy to prod.
+				Sign-In
+				Search for products
+				Add to cart
+				Place the order 
+				Make Payment
+				Confirm Order
+				Track order
+				
+				New Feature ---> independently create/work on this, test & deploy to prod.
+				
+				
+		Developer !!!
+		
+		
+		DevOps Strategy ::: 
+			Why ???
+
+		SDLC :::
+		
+			Business Analyst / Application Architects --
+			
+			Infra-Structure Team			-- 	Provision and configure the servers
+			Development Team				--	Develop the code -- Coding...
+			Testing Team 					-- 	Testing QA,UAT
+			Release Management Team			-- 	Ensure the product release on time
+			Production Support Team 		--	support the real appln.
+			Production Monitoring Team 		-- 	Monitor the production servers & Applications running production envrionment
+			
+			Continuous Development 		--->> 
+				developer1 -- java web application --> 		create the scr code - perform build - create artifacts - unit test.
+								
+								signup.jsp ==> build (Compile the src code & Create artifacts(binaries)*.war/*.jar/*.dll/*.exec)
+												
+				
+								Using Eclipse based IDE for coding
+								Visual Studio Code  IDE
+								Visual Studio 
+								Pycharm
+			
+			Environments ::::
+			
+			Non-Production Environment								Production Environment
+			
+				DEV	  - develop 											PROD  
+				BUILD - build
+				TEST
+					QA 
+					UAT 
+					
+			Continuous Integration   
+				===> Automation of build (Compile the src code & Create artifacts(binaries) & integrate for testing
+				
+			Continuous Delivery
+				
+			Continuous Testing 				
+			
+			Continuous Deployment
+			
+			Continuous Monitoring
+			
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			Continuous Delivery   --> Need Manual Approval for Prod Release 
+			
+			Continuous Deployment --> Automated Prod Release --> zero downtime Kubernetes
+			
+			
+		Applications :::
+		
+			amazon
+			facebook
+			netflix ......
+			
+		Ins/finance domain
+		
+			DevOps Strategy :::
+			
+			Release any new feature/product 
+			
+			dependencies.
+			
+			create a deployment window ::: 4 - 6hrs
+			
+			Continuous Delivery
+			
+
+		Continuous testing ::
+		
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			
+		Finance Domain
+		
+		Telecomm Domain ;;
+		
+				SP1 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.
+				SP2 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.	
+
+Adhoc Request ::: eod: DEV,testing,rm -- need severs 
+				
+			test servers.
+			
+		Jenkins to automate... 	terraform, ansible...
+			
+			
+			
+			
+		Continuous Monitoring	
+		
+			Create a E-Commerce website and host in web servers --- End-users are using this portal.
+					No. of users   10000 users -- 20000 
+					Infra-Structure - health status.
+					Security attacks 
+					
+					
+			Infra-Structure Monitoring --->  Promethus/Grafana
+			
+			Application Monitoring AppDynamics
+			
+			
+		DevOps Architects
+		DevOps Engineers 
+		
+	
+			People 
+			process -->  DevOps Strategies 
+			tools   --> 
+			
+########
+Day-2
+########
+
+			Lab Environment 
+			Version Control System Using GIT.
+
+		DevOps Tools :::
+		
+			Open-Source Tools ---> Self-Managed Tools 
+			
+				jenkins 
+			
+			DevOps Managed Services/Tools --- 
+				AWS / Az / GCP 
+				
+				
+		AWS Cloud Platform :::   				-- 	Free Tier Account! 12 Months.
+			Virtual Machines ::::					EC2 Instances 
+				Install all the devops tools. 	
+
+		AWS free - tier account
+		github.com
+		dockerhub.com
+		
+		Visual Studio Code 
+		MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+		
+		1. Create Github Account.
+		2. 
+		
+		Repository 	-- Collection of Folders and files. 
+					-- Version Control.
