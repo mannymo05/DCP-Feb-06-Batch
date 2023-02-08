@@ -427,3 +427,222 @@ Summary ::
 		5. Installion of GIT -- in Dev Environment		https://git-scm.com/downloads			
 				VS Code , GIT 
 					Window -- Install GIT 			-- Git Bash (CLU) , GIT GUI 			
+					
+########
+DAY-3
+########
+		
+		Launch EC2 Instance ---> Amazon Linux 2 Instance
+		
+		Installation of GIT 
+		Working on GIT 
+			Workflow 
+			
+			
+		Virtual Machines -- VMs  ==> Computing Device create in a Cloud envi.
+			AWS Cloud Platform	
+				Regions
+					Availability zones
+						EC2 Instances (VMs)
+		
+		
+			Launch EC2 Instance ---> Amazon Linux 2 Instance
+				
+				Access / Login to VM ::
+					Using EC2 Instance Connect 					
+					SSH Clients
+						MobaXterm/putty						
+					Terminal
+					
+			Installation of GIT on AWS Instance
+			
+				Package Manager ===> Linux --> Fedora(rhel,centos,amazon linux2) ,Debian(ubuntu)
+				
+				yum				
+				apt-get
+				rpm
+				amazon-linux-extras
+				
+				all these pkg managers shd be executed as a root user only.
+				
+				
+				Install git : https://git-scm.com/downloads	
+				
+				$ sudo -i
+				$ yum install git -y
+		
+			Working on GIT 
+				
+				Local git repo													remote git repo(github)
+					working dir. 	staging area 		local_gitrepo
+
+
+				All GIT Misc. Commands
+				
+				Git Branches
+				
+				Git Branching Strategies 
+				
+				Git Remote Repository
+				
+			index.jsp ==> save. 
+			
+				commit 	== unique commit_id 
+							user details  name of user & identity(email_id)
+			
+			git config ===> command is used to define default properties for git repo.
+			
+			git config --global user.email "xxxx@gmail.com"
+			git config --global user.name "Loksai"
+	
+			git config user.email "xxxx@gmail.com"
+			git config user.name "Loksai"
+			
+			
+			git config --list 
+			
+		
+			GIT IGNORE ::::
+			
+			
+				Java_Web_App_Project					git repo 
+					signin.java
+					email_validate.java
+					payment.java
+					index.jsp 
+					readme.txt
+					xxx.doc
+					indx.war 
+					
+			git ignore!!!!
+			
+				git init 
+					
+			
+				create .gitignore file and add the contents to be ignored
+					readme.txt
+					xxx.doc
+					indx.war
+					secrets
+					credentials
+					
+					read.md == commited 
+					
+		
+			
+				Java_Web_App_Project					Local git repo 						===> 			remote_git_repo
+					signin.java			===> read user_Cren details,auth_user
+					email_validate.java
+					payment.java
+					index.jsp 
+					readme.txt
+					xxx.doc
+					indx.war 
+					secrets
+					credentials	
+					
+				Automation :::
+				
+					shell,yaml,python,groovy scripts 		===>		gitOps
+					
+				
+				
+				git diff command
+
+  549  mkdir DCP-Feb6-Batch
+  550  cd DCP-Feb6-Batch/
+  551  ls
+  552  clear
+  553  ls
+  554  clear
+  555  mkdir  repo1
+  556  cd repo1/
+  557  git init
+  558  echo "rec1" >> f1.txt
+  559  git add f1.txt
+  560  git status
+  561  git commit -m "CM1"
+  562  git status
+  563  clear
+  564  echo "rec1" >> file1.txt
+  565  echo "rec1" >> file2.txt
+  566  echo "rec1" >> file3.txt
+  567  echo "rec1" >> index.jsp
+  568  echo "rec1" >> s1.java
+  569  ls
+  570  git status
+  571  clear
+  572  git status
+  573  git add *.java
+  574  git status
+  575  git add .
+  576  git status
+  577  git commit -m "CM2"
+  578  git log
+  579  git config list
+  580  git config --list
+  581  clear
+  582  git log
+  583  git config --list
+  584  clear
+  585  cd ..
+  586  mkdir repo2
+  587  cd repo2/
+  588  git init
+  589  clear
+  590  ls -a
+  591  vi .gitignore
+  592  ls
+  593  ls -a
+  594  git status
+  595  git add .
+  596  git commit -m "Initial Commit - Created GIT IGNORE File"
+  597  git status
+  598  ls
+  599  cat .gitignore
+  600  ls
+  601  echo "rec1" >> file1.txt
+  602  echo "rec1" >> s1.md
+  603  echo "rec1" >> sample1.txt
+  604  ls
+  605  git add .
+  606  git status
+  607  git commit -m "asdfa"
+  608  ls
+  609  clear
+  610  git log
+  611  clear
+  612  git log
+  613  git log --oneline
+  614  git log --stat
+  615  git log -1
+  616  clear
+  617  git log --oneline
+  618  git show 09df490
+  619  clear
+  620  ls
+  621  ls
+  622  git status
+  623  cat file1.txt
+  624  echo "rec2" >> file1.txt
+  625  echo "rec3" >> file1.txt
+  626  clear
+  627  ls
+  628  cat file1.txt
+  629  git diff
+  630  git add .
+  631  git diff --cached
+  632  git diff
+  633  git diff --name-only --cached
+  634  history
+
+Summary :::
+			
+		Launch EC2 Instance ---> Amazon Linux 2 Instance
+		Installation of GIT in aws  
+		
+		Working on GIT 	
+					
+					
+					
+					
