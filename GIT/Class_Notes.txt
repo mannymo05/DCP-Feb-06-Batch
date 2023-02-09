@@ -644,5 +644,391 @@ Summary :::
 		Working on GIT 	
 					
 					
-					
-					
+########
+DAY-4
+########
+		
+		Local Repository
+		
+		reset
+		revert
+		Branches 
+		
+		stash		
+		Remote Repository
+		
+		
+		reset 				:: undo 
+		
+			-- 	soft	
+				---> remove the changes from the local repo, but retains the changes in staging area and working dir. Moves the HEAD pointer to previous commit point.
+				
+			--	mixed (default option) 
+				---> remove the changes from the local repo and staging area, but retains the changes in working dir. Moves the HEAD pointer to previous commit point.
+				
+			--	hard
+				---> remove the changes from the local repo, staging area as well as from working dir. Moves the HEAD pointer to previous commit point.
+	
+	Use Case ::
+	
+		Daily Jenkins Jobs --> monitor my dev server ==> generate some facts in a workspace ---> Repo.() 
+		git reset --hard 
+		read the raw data -- process --- generate a report/dashboard/EMail
+							
+							
+						workspace 
+		git reset 
+		
+		git revert ===>> Is used to undo the changes ==> 
+						 It create a new commit point out of it.
+						 Undo a specific commit.
+						 
+						 Is always recommended to use in Shared Repo.
+		
+		git rm -f <filename1> <filename2>
+		
+		git rm --cached <filename>
+		
+		git commit ???
+		
+		"CR1001-Description"
+		
+		git commit --amend
+		
+		data integrity !!!!
+		
+	Git Branches ::::
+		Used to achieve Parallel Development without impacting others.
+		
+	git init ===> Initialize a new local repository, create default branch - master / main, create .git/ dir
+		
+	master branch 							===> index.jsp --> prod 
+		feature1 ===> index.jsp  ---> 
+		feature2 ===> index.jsp  ---> 	
+		feature3 ===> index.jsp  ---> 
+		feature4 ===> index.jsp  ---> 
+	
+	GIT Branching Strategies :::
+	
+	master branch 							===> index.jsp --> prod 
+		feature1 ===> index.jsp  ---> 
+		feature2 ===> index.jsp  ---> 	
+		feature3 ===> index.jsp  ---> 
+		feature4 ===> index.jsp  ---> 
+	
+
+	master branch 	rel1.0						===> index.jsp --> prod 
+
+		Release_Branch
+
+			Integration_Branch						App_Stream1
+
+				DEV_Branch1 						Team1
+					feature1 ===> index.jsp  ---> 
+					feature2 ===> index.jsp  ---> 	
+					feature3 ===> index.jsp  ---> 
+					feature4 ===> index.jsp  ---> 	
+				
+				DEV_Branch2							Team2	
+					feature1 ===> index.jsp  ---> 
+					feature2 ===> index.jsp  ---> 	
+					feature3 ===> index.jsp  ---> 
+					feature4 ===> index.jsp  ---> 
+
+			Integration_Branch						App_Stream2
+
+				DEV_Branch1 						Team1
+					feature1 ===> index.jsp  ---> 
+					feature2 ===> index.jsp  ---> 	
+					feature3 ===> index.jsp  ---> 
+					feature4 ===> index.jsp  ---> 	
+				
+				DEV_Branch2							Team2	
+					feature1 ===> index.jsp  ---> 
+					feature2 ===> index.jsp  ---> 	
+					feature3 ===> index.jsp  ---> 
+					feature4 ===> index.jsp  ---> 
+	
+	
+		hotfix/bugfix Branch						====> Adhoc Branches 
+	
+	
+	
+	
+	
+		Create New Branch ::
+		
+			switch
+			checkout
+			branch
+	
+	
+				master				
+					Dev_Branch  s1.txt
+						feature1 ===> s1.txt , w1.txt...............  ---> 
+						feature2 ===> ...................index.jsp  ---> 	
+						feature3 ===> index.jsp  ---> 	
+	
+	
+	
+		merge 
+		
+		merge without conflicts
+		
+		When the same file is updated by more than one user/feature ?? ===> Create Merge conflict!!!
+	
+		master ::: 
+		
+		s1.txt 
+			rec1
+			rec2 from tempbranch1
+			
+		s1.txt 
+			rec1
+			rec2 from tempbranch2				
+	
+	
+		Why Merge-Conflict Occurs ???
+			When the same file is updated by more than one user/feature.
+		
+		How to fix Merge-Conflict ???
+		
+			1. 	Identify the file that is causing Merge-Conflict
+			2.	Manually Review the Changes
+			3.	Update the file accordingly
+			4.	Issue git add and commit the final changes to target branch
+	
+		****Prevent the Merge Conflict!!!!
+		
+			Do proper review before Merge!
+			
+		
+  643  mkdir repo3
+  644  clear
+  645  ls
+  646  cd repo3
+  647  ls
+  648  clear
+  649  git init
+  650  echo "rec1" >> file1.txt
+  651  git add .
+  652  git commit -m "CM1"
+  653  echo "rec1" >> file2.txt
+  654  git add .
+  655  git commit -m "CM2"
+  656  echo "rec1" >> file3.txt
+  657  git add .
+  658  git commit -m "CM3"
+  659  echo "rec1" >> file4.txt
+  660  git add .
+  661  git commit -m "CM4"
+  662  echo "rec1" >> file5.txt
+  663  git add .
+  664  git commit -m "CM5"
+  665  clear
+  666  git log --oneline
+  667  git status
+  668  ls
+  669  git ls-files
+  670  git reset --soft 77fc4b3
+  671  git status
+  672  git ls-files
+  673  ls
+  674  git log --oneline
+  675  git commit -m "CM5.1"
+  676  git status
+  677  ls
+  678  git ls-files
+  679  git log --oneline
+  680  git show 77fc4b3
+  681  git show 33f3800
+  682  git log --oneline
+  683  git reset --mixed 77fc4b3
+  684  git status
+  685  ls
+  686  git ls-files
+  687  git log --oneline
+  688  git status
+  689  git add .
+  690  git commit -m "CM5.2"
+  691  git status
+  692  l
+  693  ls
+  694  git ls-files
+  695  git log --oneline
+  696  git reset --hard 77fc4b3
+  697  git log --oneline
+  698  git status
+  699  ls
+  700  git ls-files
+  701  clear
+  702  ls
+  703  git status
+  704  git log --oneline
+  705  git reset --hard 7303afb
+  706  git log --oneline
+  707  ls
+  708  cd ..
+  709  mkdir repo4
+  710  cd repo4/
+  711  ls
+  712  git init
+  713  clear
+  714  echo "rec1" >> f1.txxt
+  715  git add .
+  716  git commit -m "cm1"
+  717  echo "rec1" >> f2.txt
+  718  git add .
+  719  git commit -m "cm2"
+  720  echo "rec1" >> f3.txt
+  721  git add .
+  722  git commit -m "cm3"
+  723  echo "rec1" >> f4.txt
+  724  git add .
+  725  git commit -m "cm4"
+  726  git log --oneline
+  727  ls
+  728  git revert 24ba393
+  729  git log --oneline
+  730  ls
+  731  git show be8492b
+  732  ls
+  733  git status
+  734  echo "rec1" >> fq1.txt
+  735  git add .
+  736  git commit -m "sdfasdfafewfadc"
+  737  clear
+  738  git log --oneline
+  739  git commit -m "CM5"
+  740  git commit --amend -m "Actual Msg"
+  741  git log --oneline
+  742  clear
+  743  git staus
+  744  git status
+  745  echo "rec1" >> fr1.txt
+  746  echo "rec1" >> fr1.txt
+  747  echo "rec1" >> fr1.txt
+  748  echo "rec1" >> fr1.txt
+  749  clear
+  750  git add .
+  751  git status
+  752  ls
+  753  git rm --cached fr1.txt
+  754  git status
+  755  git add .
+  756  clear
+  757  git ls-files
+  758  ls
+  759  git status
+  760  git rm -f fr1.txt
+  761  ls
+  762  git status
+  763  clear
+  764  ls
+  765  cd ..
+  766  mkdir repo5
+  767  clear
+  768  cd repo5
+  769  git init
+  770  clear
+  771  ls
+  772  echo "rec1" >> s1.txt
+  773  git add .
+  774  git commit -m "CM1 from master"
+  775  clear
+  776  ls
+  777  git branch
+  778  git switch -c feature1
+  779  git branch
+  780  git switch master
+  781  clear
+  782  git branch
+  783  git branch feature2
+  784  git branch
+  785  git checkout -b feature3
+  786  git switch master
+  787  clear
+  788  git branch
+  789  git switch feature1
+  790  git log --oneline
+  791  git switch master
+  792  git log --oneline
+  793  ls
+  794  cat  s1.txt
+  795  git switch feature1
+  796  ls
+  797  cat s1.txt
+  798  git log --oneline
+  799  echo "rec1" >> w1.txt
+  800  ls
+  801  git log --oneline
+  802  git add .
+  803  git commit -m "CM1 from feature1"
+  804  git log --oneline
+  805  ls
+  806  git switch master
+  807  ls
+  808  git log --oneline
+  809  clear
+  810  git merge feature1
+  811  git log --oneline
+  812  ls
+  813  git branch
+  814  git log --oneline
+  815  git switch feature2
+  816  ls
+  817  ls
+  818  clear
+  819  git switch master
+  820  ls
+  821  git switch -c tempbranch1
+  822  ls
+  823  git switch master
+  824  git switch -c tempbranch2
+  825  git switch master
+  826  git log --oneline
+  827  clear
+  828  git switch tempbranch1
+  829  ls
+  830  echo "rec2 from tempbranch1" >> f1.txt
+  831  git add .
+  832  git commit -m "CM1 from tempbranch1"
+  833  ls
+  834  git switch master
+  835  git switch tempbranch1
+  836  ls
+  837  echo "rec2 from tempbranch1" >> s1.txt
+  838  git add .
+  839  git commit -m "CM2 from tempbranch1"
+  840  git switch master
+  841  git log --oneline
+  842  git merge tempbranch1
+  843  git status
+  844  git log --oneline
+  845  git switch tempbranch2
+  846  ls
+  847  echo "rec2 from tempbranch2" >> s1.txt
+  848  cat s1.txt
+  849  git add .
+  850  git commit -m "CM1 from tempbranch2"
+  851  git log --oneline
+  852  git switch master
+  853  git merge tempbranch2
+  854  cat s1.txt
+  855  vi s1.txt
+  856  git add .
+  857  git commit -m "Removed Merge Conflict from tempbranch2"
+  858  git status
+  859  ls
+  860  cat s1.txt
+  861  git log --oneline
+  862  history
+	
+	
+	NEXT ::: 
+		
+		rebase 					==> Local repo 		
+		stash 
+		
+				
+		fetch / pull			==> Remote repo 
