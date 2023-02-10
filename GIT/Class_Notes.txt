@@ -717,40 +717,41 @@ DAY-4
 		feature4 ===> index.jsp  ---> 
 	
 
-	master branch 	rel1.0						===> index.jsp --> prod 
+	master branch  --- 	rel1.0															===> index.jsp --> prod 
+							cherry-pick INT1_CM1-ID
+		Release_Branch INT1_CM1-ID, INT2_CM1-ID  -- rel1.0
+										cherry-pick DB1_CM1-ID
+			Integration_Branch	DB1_CM1-ID,DB2_CM1-ID -- INT1_CM1-ID											App_Stream1
 
-		Release_Branch
-
-			Integration_Branch						App_Stream1
+				DEV_Branch1 cm1,2,3,4,5,6,7,8,9,cm1,2,3,4,5,6,7,8,9	-- DB1_CM1-ID											Team1
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+				
+				DEV_Branch2	 cm1,2,3,4,5,6,7,8,9,cm1,2,3,4,5,6,7,8,9 -- DB2_CM1-ID											Team2	
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					
+					
+			Integration_Branch	DB1_CM1-ID,DB2_CM1-ID -- INT2_CM1-ID											App_Stream2
 
 				DEV_Branch1 						Team1
-					feature1 ===> index.jsp  ---> 
-					feature2 ===> index.jsp  ---> 	
-					feature3 ===> index.jsp  ---> 
-					feature4 ===> index.jsp  ---> 	
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
 				
 				DEV_Branch2							Team2	
-					feature1 ===> index.jsp  ---> 
-					feature2 ===> index.jsp  ---> 	
-					feature3 ===> index.jsp  ---> 
-					feature4 ===> index.jsp  ---> 
-
-			Integration_Branch						App_Stream2
-
-				DEV_Branch1 						Team1
-					feature1 ===> index.jsp  ---> 
-					feature2 ===> index.jsp  ---> 	
-					feature3 ===> index.jsp  ---> 
-					feature4 ===> index.jsp  ---> 	
-				
-				DEV_Branch2							Team2	
-					feature1 ===> index.jsp  ---> 
-					feature2 ===> index.jsp  ---> 	
-					feature3 ===> index.jsp  ---> 
-					feature4 ===> index.jsp  ---> 
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
 	
 	
-		hotfix/bugfix Branch						====> Adhoc Branches 
+		hotfix/bugfix Branch						====> 	Adhoc Branches 
 	
 	
 	
@@ -1028,7 +1029,374 @@ DAY-4
 	NEXT ::: 
 		
 		rebase 					==> Local repo 		
+		
 		stash 
 		
-				
+		
 		fetch / pull			==> Remote repo 
+		
+########
+DAY-5
+########
+		
+		Git Branches 
+		
+			git Rebase 
+			
+			git squash
+			
+			git cherry-pick 
+			
+			git stash 
+			
+		
+
+		Multiple branches ::::
+		
+		master		- cm1 
+					git merge feature1
+						cm1,f1cm1,f1cm2,f1cm3
+						
+					#git merge feature2 
+					#	cm1,f2cm1,f2cm2,f2cm3,f1cm1,f1cm2,f1cm3
+					
+					
+			feature1	--> cm1,f1cm1,f1cm2,f1cm3
+			
+			feature2	--> cm1,f2cm1,f2cm2,f2cm3
+					git rebase master
+						cm1,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+		Local repo. between branches
+			
+			
+			
+			Local Repo							<=====>										Remote Repo 
+			
+			fetch / pull 
+			
+			
+		Squash :
+		
+		master :::	cm1,f1.1,2,3,4,5,6,7,8,9,.............,100,f2.1,2,3,4,5,6,7,8,9,.............,100
+		
+					cm1,fv1.1,fv2.1
+					
+		
+			feature1	cm1,f1.1,2,3,4,5,6,7,8,9,.............,100 - fv1.1
+			
+			feature2 	cm1,f2.1,2,3,4,5,6,7,8,9,.............,100 - fv2.1
+			
+			
+		Squash is used to combine more than one commit point into one.
+		
+		
+			Before Merge :: ---> While working in current branch.
+			
+				developer1 == task -- 2 functions 
+				
+					sample.java ===> 	func1.1,2,3,4,5,6,7,8,9,func2.1,2,3,4,5,6,7,8,9
+					
+										func1v1.0,func2v1.0
+										
+					git rebase -i HEAD~9
+			
+			
+			While Merging ::
+			
+				master -- cm1
+				
+					feature1 -- cm1,func1.1,2,3,4,5,6,7,8,9
+					
+				switch to master 
+					
+					git merge --squash feature1 
+		
+			git cherry-pick <commit_id>   		==> used to merge any specific commit
+			
+			git cherry-pick <commit_id1> <commit_id2>
+		
+		merge, rebase, pull, cherry-pick 			====> 	doing the same 
+		
+		
+		git reflog ===> 
+		
+		git log 
+
+
+	git stash :::
+	
+	master 					cm1 
+	
+		feature1	==> cm1,f1m1,2,3,4,5,6,.......
+		
+		adhoc-change ===>  cm1,........
+		
+		
+	git stash  ====> It will save the uncommitted change into a temporary area.
+		
+	stash apply vs pop
+
+Stash current work:
+git stash
+
+Saving stashes with a message: 
+git stash save "<Stashing Message>"
+
+Check the stored stashes: 
+git stash list
+
+Re-apply the changes that you just stashed 
+git stash apply
+
+Track the stashes and their changes: 
+git stash show
+
+Re-apply the previous commits: 
+git stash pop
+
+Delete a most recent stash from the queue: 
+git stash drop
+
+Delete all the available stashes at once: 
+git stash clear
+
+Stash work on a separate branch: 
+git stash branch <branch name>
+
+Remote Repository ::::
+
+			github :::
+			
+
+  509  cd DCP-Feb6-Batch/
+  510  ls
+  511  clear
+  512  mkdir trepo1
+  513  cd trepo1/
+  514  git init
+  515  clear
+  516  ehco "rec1" >> file1.txt
+  517  echo "rec1" >> file1.txt
+  518  git add .
+  519  git commit -m "CM1"
+  520  clear
+  521  git status
+  522  ls
+  523  clear
+  524  git log --oneline
+  525  git branch feature1
+  526  git branch feature2
+  527  git switch feature1
+  528  git log --oneline
+  529  echo "rec1" >> a1.txt
+  530  git add .
+  531  git commit -m "CM1 from feature1"
+  532  echo "rec1" >> a2.txt
+  533  git add .
+  534  git commit -m "CM2 from feature1"
+  535  clear
+  536  ls
+  537  git log --oneline
+  538  git switch master
+  539  git merge feature1
+  540  clear
+  541  git log --oneline
+  542  git switch feature2
+  543  echo "rec1" >> w1.txt
+  544  git add .
+  545  git commit -m "CM1 from feature2"
+  546  clear
+  547  git log --oneline
+  548  git switch master
+  549  git log --oneline
+  550  git switch feature2
+  551* git rebase mast
+  552  git log --oneline
+  553  git switch master
+  554  git merge feature2
+  555  git log --oneline
+  556  clear
+  557  git branch
+  558  cd ..
+  559  mkdir trepo2
+  560  cd trepo2
+  561  clear
+  562  git init
+  563  echo "rec1" >> f1.txt
+  564  git add .
+  565  git commit -m "cm1 from master"
+  566  clear
+  567  git branch feature1
+  568  git branch feature2
+  569  git switch feature1
+  570  echo "rec1" >> s1.txt
+  571  git add .
+  572  git commit -m "CM1 from feature1"
+  573  clear
+  574  echo "rec1" >> s2.txt
+  575  git add .
+  576  git commit -m "CM2 from feature1"
+  577  echo "rec1" >> s3.txt
+  578  git add .
+  579  git commit -m "CM3 from feature1"
+  580  echo "rec1" >> s4.txt
+  581  git add .
+  582  git commit -m "CM4 from feature1"
+  583  echo "rec1" >> s5.txt
+  584  git add .
+  585  git commit -m "CM5 from feature1"
+  586  clear
+  587  ls
+  588  git log --oneline
+  589  git rebase -i HEAD~5
+  590  git log --oneline
+  591  ls
+  592  git switch master
+  593  ls
+  594  git switch feature2
+  595  ls
+  596  clear
+  597  ls
+  598  echo "rec1" >> e1.txt
+  599  git add .
+  600  git commit -m "CM1 from feature2"
+  601  echo "rec1" >> e2.txt
+  602  git add .
+  603  git commit -m "CM2 from feature2"
+  604  echo "rec1" >> e3.txt
+  605  git add .
+  606  git commit -m "CM3 from feature2"
+  607  echo "rec1" >> e4.txt
+  608  git add .
+  609  git commit -m "CM4 from feature2"
+  610  git log --oneline
+  611  git switch master
+  612  git merge --squash feature2
+  613  git status
+  614  git commit -m "Combined commits from feature2"
+  615  git status
+  616  git log --oneline
+  617  ls
+  618  git switch feature1
+  619  git log --oneline
+  620  echo "rec1" >> g1.txt
+  621  git add .
+  622  git commit -m "CM1 from feature1"
+  623  echo "rec1" >> g1.txt
+  624  git add .
+  625  git commit -m "CM2 from feature1"
+  626  clear
+  627  git log --oneline
+  628  git swithch master
+  629  git switch master
+  630  clear
+  631  git switch feature1
+  632  git log --oneline
+  633  git rebase master
+  634  git log --oneline
+  635  git switch master
+  636  ls
+  637  git log --oneline
+  638  git cherry-pick ac3abc3
+  639  ls
+  640  git log --oneline
+  641  clear
+  642  git branch
+  643  git status
+  644  git switch feature2
+  645  git status
+  646  clear
+  647  echo "rec1" >> t1.txt
+  648  git add .
+  649  echo "rec1" >> t1.txt
+  650  git add .
+  651  git add .
+  652  git status
+  653  git switch -c feature3
+  654  git status
+  655  git switch feature2
+  656  git status
+  657  git stash
+  658  git status
+  659  ls -a
+  660  git stash list
+  661  echo "rec1" >> l1.txt
+  662  git add .
+  663  git status
+  664  git stash
+  665  git stash list
+  666  echo "rec1" >> l2.txt
+  667  git add .
+  668  git stash save "stash created for l2.txt"
+  669  git stash list
+  670  ls
+  671  git status
+  672  git stash apply
+  673  git status
+  674  git stash list
+  675  git commit -m "CMc"
+  676  git status
+  677  ls
+  678  git stash drop
+  679  git stash list
+  680  git stash pop
+  681  git status
+  682  git stash list
+  683  git stash show
+  684  git status
+  685  git stash
+  686  git status
+  687  git stash list
+  688  git stash show stash@{1}
+  689  git stash show stash@{0}
+  690  git stash clear
+  691  git stash list
+  692  git status
+  693  clear
+  694  echo "rec1" >> file1.txt
+  695  git add .
+  696  vi file1.txt
+  697  ls
+  698  git status
+  699  vi file1.txt
+  700  git add .
+  701  git stash branch temp-feature2
+  702  git status
+  703  git stash branch tempfeature2
+  704  clear
+  705  git commit -m "adfasd"
+  706  git status
+  707  clear
+  708  git branch
+  709  echo "rec" >> file4.txt
+  710  git add .
+  711  git stash branch b1
+  712  git stash
+  713  git stash branch b1
+  714  clear
+  715  git status
+  716  git commit -m "backup of feature2"
+  717  git branch
+  718  git stash list
+  719  clear
+  720  history
+
+
+Summary :::
+
+			Git Branches 
+		
+				git Rebase 
+			
+				git squash
+			
+				git cherry-pick 
+			
+			git stash 
+			
+			github remote repo -- 
+					repo creation
+					pull request
+			
+			
