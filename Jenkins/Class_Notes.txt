@@ -1696,7 +1696,7 @@ Configuration!
 		Jenkins Job :: 
 
 ######	
-DAY-8
+DAY-12
 ######	
 	
 		Installed Jenkins 
@@ -1761,8 +1761,65 @@ pipeline {
 }
 
 
-		
+pipeline {
+    agent any
 
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+    }
+}
+			
+			
+node {
+    def mvnHome
+    stage('Preparation') { // for display purposes
+        // Get some code from a GitHub repository
+        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        // Get the Maven tool.
+        // ** NOTE: This 'M3' Maven tool must be configured
+        // **       in the global configuration.
+        mvnHome = tool 'M3'
+    }
+    stage('Build') {
+        // Run the maven build
+        withEnv(["MVN_HOME=$mvnHome"]) {
+            if (isUnix()) {
+                sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            } else {
+                bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+            }
+        }
+    }
+    stage('Results') {
+        junit '**/target/surefire-reports/TEST-*.xml'
+        archiveArtifacts 'target/*.jar'
+    }
+}
 			
 			
 			
@@ -1791,4 +1848,197 @@ pipeline {
 			
 			Configure Slave Machine in Jenkins_Master!!
 			
+
+########
+DAY-9
+########			
+			Jenkins-Master & Slave 
+			
+			CI/CD Pipeline :::
+			
+			Build & Artifacts 
+			
+			MAVEN --> Build (Compile & create artifacts, Unit Testing)
+			
+			New Project - VS Code -- JAVA MAVEN APPLN. -- Push the src to remote repo
+			CR / Bugfix 
+			
+			Maven Project ---> pom.xml file 
+								- Contains the dependencies and plugins.
+			
+			
+		*.exec 
+		
+		*.war / *.jar / *.dll /
+		
+	New Project - VS Code -- JAVA MAVEN APPLN. -- Push the src to remote repo
+		
+		Jenkins_Pipeline : 
+			SCM_Checkout --> Build --> Create Artifacts --> Deploy to Test-Server 
+		
+		Deployment --> process of copying the artifact to target servers - QA/UAT/PROD
+		
+		Jenkins_Master				Slave1				QA-Server
+
+		Slave1 (*.war) 								QA-Server	 Computing Machine (H/W)	
+														Application Server (S/W) 
+															Eg.: Tomcat, Nginx
+
+		target/mvn-hello-world.war					/opt/tomcat/webapps/mvn-hello-world.war
+
+Jenkins Pipeline CI/CD ::
+
+scm-checkout --> build --> deployed to QA --> UAT --> PROD 
+	
+	post build action (send email) 
+		success
+		failure 
+
+
+
+Email Notifications :::
+
+
+
+
+Build Triggers ::::
+
+	Build Periodic
+		
+		Trigger Jenkins Jobs for every day 9AM !!!
+		
+		In this case, Build Periodic will trigger the job for every 4 hours, irrespective of SCM Change.
+
+Based on SCM Code Changes :
+* GIT Should be install in Jenkins Master 
+	
+	Poll SCM
+	
+		DEV Team ::: continuous development ---> Commit src to remote repo.
+
+		Test cycle runf for every 4hr. once
+		
+		In this case, Poll scm will trigger the job for every 4 hours, ONLY if there is any SCM Change.
+	
+	Github webhook
+	
+		In this case, Github webhook will trigger the job for every commit happen in SCM repo.
+	
+#Github webhook to automatically trigger build pipeline!
+
+#Goto Github Repository setting, 
+Select webhook, 
+
+Click Add Webhook
+
+Enter Jenkins Master URL. eg.:
+http://<public-IP>:8080/github-webhook/
+
+http://35.154.44.76:8080/github-webhook/
+
+Choose the push event and save the webhook configuration
+
+
+
+
+
+
+
+
+pipeline {
+        
+	agent {
+        label 'javaslave1'
+    }
+
+    tools 
+    {
+        maven 'maven-3.8.7'
+    }
+	
+    stages {
+        stage('SCM-CHECKOUT') {
+            steps {
+                echo 'SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('BUILD') {
+            steps {
+                echo 'Maven Build'
+				sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+        }
+        stage('DEPLOY TO QA SERVER') {
+            steps {
+                echo 'Deploy to Tomcat Server'
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }		
+    }
+}			
+			
+			
+pipeline {
+    
+    agent {
+        label 'Slave1'
+    }
+
+    tools 
+    {
+        maven 'Maven-3.8.7'
+    }
+    
+    stages {
+        stage('SCM-Checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+
+            }
+              post {
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "we failed."
+                }
+              }
+			}
+        stage('Build') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+              post {
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed."
+                }
+              }
+			}
+
+        stage('Deploy to QA AppServer') {
+            steps {
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+              post {
+                success {
+                  sh "echo 'Send mail on success'"
+                  //mail bcc: '', body: 'success', cc: '', from: '', replyTo: '', subject: 'success', to: 'dummyid@gmail.com'
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "we passed."
+                }
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "we failed."
+                }
+              }	
+		}
+    }
+}
+	
+		
 		
