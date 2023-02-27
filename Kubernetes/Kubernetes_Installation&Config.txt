@@ -3,8 +3,9 @@
 #	Kube-Worker2
 
 #https://kubernetes.io/docs/setup/
-	
+# ON all vm's add the security config for the below range, custom inbound rule	
 #Add Port: 0 - 65535
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ###On Both Master and Worker Nodes:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
