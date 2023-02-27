@@ -1,0 +1,2338 @@
+DCP-Feb-06-Batch
+
+######
+Day-1
+######
+		Introduction to DevOps
+		Why DevOps ??
+		
+		SDLC Process ??
+		Software 
+		
+		SDLC -- Software Development Life Cycle
+		
+		Develop a software Application :
+					Desktop
+					Web
+					Mobile 
+		
+		Free-lance Web Developer :::
+			Create a E-Commerce website and host in web servers 
+			
+		SDLC 
+			Requirement Analysis
+			Design
+			Code & Development 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Process ::: 
+			Create a E-Commerce website and host in web servers - 6months
+			
+		Water-fall Model ---			Linear Approach.
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+		
+		New CR : 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Agile Methodilogies :::
+		
+			Modules / Iterations ::::
+			Create a E-Commerce website and host in web servers - 6months
+		
+		Module-1 / Iteration 1	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		Module-2 / Iteration 2	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring		
+
+		Module-3 / Iteration 3	
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		3 Modules --> deployment 
+		
+		
+		DevOps 
+		
+			Requirement Analysis
+			Design
+			Code & Development ==> 
+			Testing 
+			Implementation / Deployments
+			Maintainence - Enhancements/Monitoring
+			
+		
+		Agile vs DevOps ::::
+		
+		Create a E-Commerce website and host in web servers
+		
+		5 to 10 ???
+		
+		Application :::
+		
+			Monolith Application Architecture ===> 
+			
+			Micro-service based Architecture
+			
+			Create a E-Commerce website and host in web servers
+			www.amazon.com
+			
+			End-user ::
+				
+				Sign-up							Miroservice --> independently create/work on this, test & deploy to prod.
+				Sign-In
+				Search for products
+				Add to cart
+				Place the order 
+				Make Payment
+				Confirm Order
+				Track order
+				
+				New Feature ---> independently create/work on this, test & deploy to prod.
+				
+				
+		Developer !!!
+		
+		
+		DevOps Strategy ::: 
+			Why ???
+
+		SDLC :::
+		
+			Business Analyst / Application Architects --
+			
+			Infra-Structure Team			-- 	Provision and configure the servers
+			Development Team				--	Develop the code -- Coding...
+			Testing Team 					-- 	Testing QA,UAT
+			Release Management Team			-- 	Ensure the product release on time
+			Production Support Team 		--	support the real appln.
+			Production Monitoring Team 		-- 	Monitor the production servers & Applications running production envrionment
+			
+			Continuous Development 		--->> 
+				developer1 -- java web application --> 		create the scr code - perform build - create artifacts - unit test.
+								
+								signup.jsp ==> build (Compile the src code & Create artifacts(binaries)*.war/*.jar/*.dll/*.exec)
+												
+				
+								Using Eclipse based IDE for coding
+								Visual Studio Code  IDE
+								Visual Studio 
+								Pycharm
+			
+			Environments ::::
+			
+			Non-Production Environment								Production Environment
+			
+				DEV	  - develop 											PROD  
+				BUILD - build
+				TEST
+					QA 
+					UAT 
+					
+			Continuous Integration   
+				===> Automation of build (Compile the src code & Create artifacts(binaries) & integrate for testing
+				
+			Continuous Delivery
+				
+			Continuous Testing 				
+			
+			Continuous Deployment
+			
+			Continuous Monitoring
+			
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			Continuous Delivery   --> Need Manual Approval for Prod Release 
+			
+			Continuous Deployment --> Automated Prod Release --> zero downtime Kubernetes
+			
+			
+		Applications :::
+		
+			amazon
+			facebook
+			netflix ......
+			
+		Ins/finance domain
+		
+			DevOps Strategy :::
+			
+			Release any new feature/product 
+			
+			dependencies.
+			
+			create a deployment window ::: 4 - 6hrs
+			
+			Continuous Delivery
+			
+
+		Continuous testing ::
+		
+			Non-Prod 																			Prod Environment
+			
+			Build --> Created artifacts --> publised to QA --> publised to UAT 		---> 		Release to PROD Environment
+			
+			
+			
+		Finance Domain
+		
+		Telecomm Domain ;;
+		
+				SP1 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.
+				SP2 -- decided to release any new product/offer/service to customers -- that shd be done ASAP.	
+
+Adhoc Request ::: eod: DEV,testing,rm -- need severs 
+				
+			test servers.
+			
+		Jenkins to automate... 	terraform, ansible...
+			
+			
+			
+			
+		Continuous Monitoring	
+		
+			Create a E-Commerce website and host in web servers --- End-users are using this portal.
+					No. of users   10000 users -- 20000 
+					Infra-Structure - health status.
+					Security attacks 
+					
+					
+			Infra-Structure Monitoring --->  Promethus/Grafana
+			
+			Application Monitoring AppDynamics
+			
+			
+		DevOps Architects
+		DevOps Engineers 
+		
+	
+			People 
+			process -->  DevOps Strategies 
+			tools   --> 
+			
+########
+Day-2
+########
+
+			Lab Environment 
+			Version Control System Using GIT.
+
+		DevOps Tools :::
+		
+			Open-Source Tools ---> Self-Managed Tools 
+			
+				jenkins 
+			
+			DevOps Managed Services/Tools --- 
+				AWS / Az / GCP 
+				
+				
+		AWS Cloud Platform :::   				-- 	Free Tier Account! 12 Months.
+			Virtual Machines ::::					EC2 Instances - Linux 
+				Install all the devops tools. 	
+
+		AWS free - tier account
+		
+		github.com   -- Remote Repository
+		
+		dockerhub.com
+		
+		Visual Studio Code 			https://code.visualstudio.com/download		
+		MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+			https://mobaxterm.mobatek.net/download.html
+
+
+Tasks::			
+		1. Create Github Account.	
+		2. Create AWS Free-tier.		https://aws.amazon.com/console/
+		3. Visual Studio Code 			https://code.visualstudio.com/download		
+		4. MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+										https://mobaxterm.mobatek.net/download.html		
+		
+		
+		
+		Repository 	-- Collection of Folders and files. 
+					-- Version Control.
+					
+					
+		sync-fork
+		
+
+Version Control System Using GIT ::::
+
+		Version Control System ::::
+		
+		Development Environment ::::
+				Coding & Development --->
+				
+				Developer1  	-> 			signin.jsp 
+					IDE -- Visual Studio Code / Eclipse 
+					
+					signin.jsp -- saved ..
+					
+					incremental Changes ---> 
+					
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					signin.jsp - saved -- build -- Unit-test
+					
+				VCS ---> 
+				
+					signin.jsp -- save -- v1.0
+					signin.jsp -- save -- v1.1
+					signin.jsp -- save -- v1.2
+					signin.jsp -- save -- v1.3
+					signin.jsp -- save -- v1.4
+					signin.jsp -- save -- v1.5
+					signin.jsp -- save -- v1.6   =>>>
+					
+					versions / commit_id / tags 
+					
+				Version Control System :::
+				
+					-	Is used to version control the source code 
+					-	Used to Track the changes
+					
+					-	Used to perform Parallel Development.
+						using Branch. 
+				
+				Repository	-- Is a collection of Files and Folders which are version controlled by GIT.
+				
+					
+		Free-lance web Developer!!!
+		
+				Creating the Project
+					
+					E_Commerce_xyz Project Folder	  -- Local Repo.				
+						index.jsp
+						validation.java
+					
+				Centralize VCS --->  google docs - web service 
+				
+		10-lines		index.jsp ---> saved & commited the file to git repo -- Commit_id - v1.0
+										save & 
+										
+			
+		DevOps == 
+		
+			-	Install GIT & Administration https://git-scm.com/downloads
+			
+			-	Git work flow 
+			
+			-	Git Branching Strategies 
+			
+		
+		GIT Work Flow :::	
+		
+		
+			Local Repository 	(Local Machine)													Remote Repository (Remote Servers)
+			
+			New index.jsp -- save in local machine & version control in local machine	====>   Remote Repo index.jsp
+																						Push TO 	
+
+			index.jsp
+				func1
+				func2
+				func3
+
+		
+		Installion of GIT -- in Dev Environment		https://git-scm.com/downloads	
+		
+				VS Code , GIT 
+				
+					Window -- Install GIT 			-- Git Bash (CLU) , GIT GUI 
+					Linux
+					Mac 		
+		
+		Workload :::
+		
+			Create a New Projects
+			Change Request - Enhance Projects
+			Bug fixing 
+			
+			
+		Open GIT Bash ::
+		
+			d: 
+			
+			cd d: 
+			mkdir Home_Dir
+			cd Home_Dir
+			mkdir Project_Repo1
+			cd Project_Repo1
+				git repo1
+			
+			
+		GIT BASH :: - CLU 
+
+		Create local repo.
+		
+		git init ==> Initialize Local Repository & Create a default branch(master/main)
+		
+		Create the files 
+		
+		git add 
+		
+		git commit 
+			
+			
+Summary ::
+		
+		Tasks::			
+		1. Create Github Account.	
+		2. Create AWS Free-tier.		https://aws.amazon.com/console/
+		3. Visual Studio Code 			https://code.visualstudio.com/download		
+		4. MobaXterm/putty		-- SSH Client -- used to access Remote servers from our local machine.
+										https://mobaxterm.mobatek.net/download.html		
+		
+		5. Installion of GIT -- in Dev Environment		https://git-scm.com/downloads			
+				VS Code , GIT 
+					Window -- Install GIT 			-- Git Bash (CLU) , GIT GUI 			
+					
+########
+DAY-3
+########
+		
+		Launch EC2 Instance ---> Amazon Linux 2 Instance
+		
+		Installation of GIT 
+		Working on GIT 
+			Workflow 
+			
+			
+		Virtual Machines -- VMs  ==> Computing Device create in a Cloud envi.
+			AWS Cloud Platform	
+				Regions
+					Availability zones
+						EC2 Instances (VMs)
+		
+		
+			Launch EC2 Instance ---> Amazon Linux 2 Instance
+				
+				Access / Login to VM ::
+					Using EC2 Instance Connect 					
+					SSH Clients
+						MobaXterm/putty						
+					Terminal
+					
+			Installation of GIT on AWS Instance
+			
+				Package Manager ===> Linux --> Fedora(rhel,centos,amazon linux2) ,Debian(ubuntu)
+				
+				yum				
+				apt-get
+				rpm
+				amazon-linux-extras
+				
+				all these pkg managers shd be executed as a root user only.
+				
+				
+				Install git : https://git-scm.com/downloads	
+				
+				$ sudo -i
+				$ yum install git -y
+		
+			Working on GIT 
+				
+				Local git repo													remote git repo(github)
+					working dir. 	staging area 		local_gitrepo
+
+
+				All GIT Misc. Commands
+				
+				Git Branches
+				
+				Git Branching Strategies 
+				
+				Git Remote Repository
+				
+			index.jsp ==> save. 
+			
+				commit 	== unique commit_id 
+							user details  name of user & identity(email_id)
+			
+			git config ===> command is used to define default properties for git repo.
+			
+			git config --global user.email "xxxx@gmail.com"
+			git config --global user.name "Loksai"
+	
+			git config user.email "xxxx@gmail.com"
+			git config user.name "Loksai"
+			
+			
+			git config --list 
+			
+		
+			GIT IGNORE ::::
+			
+			
+				Java_Web_App_Project					git repo 
+					signin.java
+					email_validate.java
+					payment.java
+					index.jsp 
+					readme.txt
+					xxx.doc
+					indx.war 
+					
+			git ignore!!!!
+			
+				git init 
+					
+			
+				create .gitignore file and add the contents to be ignored
+					readme.txt
+					xxx.doc
+					indx.war
+					secrets
+					credentials
+					
+					read.md == commited 
+					
+		
+			
+				Java_Web_App_Project					Local git repo 						===> 			remote_git_repo
+					signin.java			===> read user_Cren details,auth_user
+					email_validate.java
+					payment.java
+					index.jsp 
+					readme.txt
+					xxx.doc
+					indx.war 
+					secrets
+					credentials	
+					
+				Automation :::
+				
+					shell,yaml,python,groovy scripts 		===>		gitOps
+					
+				
+				
+				git diff command
+
+  549  mkdir DCP-Feb6-Batch
+  550  cd DCP-Feb6-Batch/
+  551  ls
+  552  clear
+  553  ls
+  554  clear
+  555  mkdir  repo1
+  556  cd repo1/
+  557  git init
+  558  echo "rec1" >> f1.txt
+  559  git add f1.txt
+  560  git status
+  561  git commit -m "CM1"
+  562  git status
+  563  clear
+  564  echo "rec1" >> file1.txt
+  565  echo "rec1" >> file2.txt
+  566  echo "rec1" >> file3.txt
+  567  echo "rec1" >> index.jsp
+  568  echo "rec1" >> s1.java
+  569  ls
+  570  git status
+  571  clear
+  572  git status
+  573  git add *.java
+  574  git status
+  575  git add .
+  576  git status
+  577  git commit -m "CM2"
+  578  git log
+  579  git config list
+  580  git config --list
+  581  clear
+  582  git log
+  583  git config --list
+  584  clear
+  585  cd ..
+  586  mkdir repo2
+  587  cd repo2/
+  588  git init
+  589  clear
+  590  ls -a
+  591  vi .gitignore
+  592  ls
+  593  ls -a
+  594  git status
+  595  git add .
+  596  git commit -m "Initial Commit - Created GIT IGNORE File"
+  597  git status
+  598  ls
+  599  cat .gitignore
+  600  ls
+  601  echo "rec1" >> file1.txt
+  602  echo "rec1" >> s1.md
+  603  echo "rec1" >> sample1.txt
+  604  ls
+  605  git add .
+  606  git status
+  607  git commit -m "asdfa"
+  608  ls
+  609  clear
+  610  git log
+  611  clear
+  612  git log
+  613  git log --oneline
+  614  git log --stat
+  615  git log -1
+  616  clear
+  617  git log --oneline
+  618  git show 09df490
+  619  clear
+  620  ls
+  621  ls
+  622  git status
+  623  cat file1.txt
+  624  echo "rec2" >> file1.txt
+  625  echo "rec3" >> file1.txt
+  626  clear
+  627  ls
+  628  cat file1.txt
+  629  git diff
+  630  git add .
+  631  git diff --cached
+  632  git diff
+  633  git diff --name-only --cached
+  634  history
+
+Summary :::
+			
+		Launch EC2 Instance ---> Amazon Linux 2 Instance
+		Installation of GIT in aws  
+		
+		Working on GIT 	
+					
+					
+########
+DAY-4
+########
+		
+		Local Repository
+		
+		reset
+		revert
+		Branches 
+		
+		stash		
+		Remote Repository
+		
+		
+		reset 				:: undo 
+		
+			-- 	soft	
+				---> remove the changes from the local repo, but retains the changes in staging area and working dir. Moves the HEAD pointer to previous commit point.
+				
+			--	mixed (default option) 
+				---> remove the changes from the local repo and staging area, but retains the changes in working dir. Moves the HEAD pointer to previous commit point.
+				
+			--	hard
+				---> remove the changes from the local repo, staging area as well as from working dir. Moves the HEAD pointer to previous commit point.
+	
+	Use Case ::
+	
+		Daily Jenkins Jobs --> monitor my dev server ==> generate some facts in a workspace ---> Repo.() 
+		git reset --hard 
+		read the raw data -- process --- generate a report/dashboard/EMail
+							
+							
+						workspace 
+		git reset 
+		
+		git revert ===>> Is used to undo the changes ==> 
+						 It create a new commit point out of it.
+						 Undo a specific commit.
+						 
+						 Is always recommended to use in Shared Repo.
+		
+		git rm -f <filename1> <filename2>
+		
+		git rm --cached <filename>
+		
+		git commit ???
+		
+		"CR1001-Description"
+		
+		git commit --amend
+		
+		data integrity !!!!
+		
+	Git Branches ::::
+		Used to achieve Parallel Development without impacting others.
+		
+	git init ===> Initialize a new local repository, create default branch - master / main, create .git/ dir
+		
+	master branch 							===> index.jsp --> prod 
+		feature1 ===> index.jsp  ---> 
+		feature2 ===> index.jsp  ---> 	
+		feature3 ===> index.jsp  ---> 
+		feature4 ===> index.jsp  ---> 
+	
+	GIT Branching Strategies :::
+	
+	master branch 							===> index.jsp --> prod 
+		feature1 ===> index.jsp  ---> 
+		feature2 ===> index.jsp  ---> 	
+		feature3 ===> index.jsp  ---> 
+		feature4 ===> index.jsp  ---> 
+	
+
+	master branch  --- 	rel1.0															===> index.jsp --> prod 
+							cherry-pick INT1_CM1-ID
+		Release_Branch INT1_CM1-ID, INT2_CM1-ID  -- rel1.0
+										cherry-pick DB1_CM1-ID
+			Integration_Branch	DB1_CM1-ID,DB2_CM1-ID -- INT1_CM1-ID											App_Stream1
+
+				DEV_Branch1 cm1,2,3,4,5,6,7,8,9,cm1,2,3,4,5,6,7,8,9	-- DB1_CM1-ID											Team1
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+				
+				DEV_Branch2	 cm1,2,3,4,5,6,7,8,9,cm1,2,3,4,5,6,7,8,9 -- DB2_CM1-ID											Team2	
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					
+					
+			Integration_Branch	DB1_CM1-ID,DB2_CM1-ID -- INT2_CM1-ID											App_Stream2
+
+				DEV_Branch1 						Team1
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+				
+				DEV_Branch2							Team2	
+					feature1 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature2 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 	
+					feature3 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+					feature4 ===> index.jsp  ---> 			cm1,2,3,4,5,6,7,8,9 
+	
+	
+		hotfix/bugfix Branch						====> 	Adhoc Branches 
+	
+	
+	
+	
+	
+		Create New Branch ::
+		
+			switch
+			checkout
+			branch
+	
+	
+				master				
+					Dev_Branch  s1.txt
+						feature1 ===> s1.txt , w1.txt...............  ---> 
+						feature2 ===> ...................index.jsp  ---> 	
+						feature3 ===> index.jsp  ---> 	
+	
+	
+	
+		merge 
+		
+		merge without conflicts
+		
+		When the same file is updated by more than one user/feature ?? ===> Create Merge conflict!!!
+	
+		master ::: 
+		
+		s1.txt 
+			rec1
+			rec2 from tempbranch1
+			
+		s1.txt 
+			rec1
+			rec2 from tempbranch2				
+	
+	
+		Why Merge-Conflict Occurs ???
+			When the same file is updated by more than one user/feature.
+		
+		How to fix Merge-Conflict ???
+		
+			1. 	Identify the file that is causing Merge-Conflict
+			2.	Manually Review the Changes
+			3.	Update the file accordingly
+			4.	Issue git add and commit the final changes to target branch
+	
+		****Prevent the Merge Conflict!!!!
+		
+			Do proper review before Merge!
+			
+		
+  643  mkdir repo3
+  644  clear
+  645  ls
+  646  cd repo3
+  647  ls
+  648  clear
+  649  git init
+  650  echo "rec1" >> file1.txt
+  651  git add .
+  652  git commit -m "CM1"
+  653  echo "rec1" >> file2.txt
+  654  git add .
+  655  git commit -m "CM2"
+  656  echo "rec1" >> file3.txt
+  657  git add .
+  658  git commit -m "CM3"
+  659  echo "rec1" >> file4.txt
+  660  git add .
+  661  git commit -m "CM4"
+  662  echo "rec1" >> file5.txt
+  663  git add .
+  664  git commit -m "CM5"
+  665  clear
+  666  git log --oneline
+  667  git status
+  668  ls
+  669  git ls-files
+  670  git reset --soft 77fc4b3
+  671  git status
+  672  git ls-files
+  673  ls
+  674  git log --oneline
+  675  git commit -m "CM5.1"
+  676  git status
+  677  ls
+  678  git ls-files
+  679  git log --oneline
+  680  git show 77fc4b3
+  681  git show 33f3800
+  682  git log --oneline
+  683  git reset --mixed 77fc4b3
+  684  git status
+  685  ls
+  686  git ls-files
+  687  git log --oneline
+  688  git status
+  689  git add .
+  690  git commit -m "CM5.2"
+  691  git status
+  692  l
+  693  ls
+  694  git ls-files
+  695  git log --oneline
+  696  git reset --hard 77fc4b3
+  697  git log --oneline
+  698  git status
+  699  ls
+  700  git ls-files
+  701  clear
+  702  ls
+  703  git status
+  704  git log --oneline
+  705  git reset --hard 7303afb
+  706  git log --oneline
+  707  ls
+  708  cd ..
+  709  mkdir repo4
+  710  cd repo4/
+  711  ls
+  712  git init
+  713  clear
+  714  echo "rec1" >> f1.txxt
+  715  git add .
+  716  git commit -m "cm1"
+  717  echo "rec1" >> f2.txt
+  718  git add .
+  719  git commit -m "cm2"
+  720  echo "rec1" >> f3.txt
+  721  git add .
+  722  git commit -m "cm3"
+  723  echo "rec1" >> f4.txt
+  724  git add .
+  725  git commit -m "cm4"
+  726  git log --oneline
+  727  ls
+  728  git revert 24ba393
+  729  git log --oneline
+  730  ls
+  731  git show be8492b
+  732  ls
+  733  git status
+  734  echo "rec1" >> fq1.txt
+  735  git add .
+  736  git commit -m "sdfasdfafewfadc"
+  737  clear
+  738  git log --oneline
+  739  git commit -m "CM5"
+  740  git commit --amend -m "Actual Msg"
+  741  git log --oneline
+  742  clear
+  743  git staus
+  744  git status
+  745  echo "rec1" >> fr1.txt
+  746  echo "rec1" >> fr1.txt
+  747  echo "rec1" >> fr1.txt
+  748  echo "rec1" >> fr1.txt
+  749  clear
+  750  git add .
+  751  git status
+  752  ls
+  753  git rm --cached fr1.txt
+  754  git status
+  755  git add .
+  756  clear
+  757  git ls-files
+  758  ls
+  759  git status
+  760  git rm -f fr1.txt
+  761  ls
+  762  git status
+  763  clear
+  764  ls
+  765  cd ..
+  766  mkdir repo5
+  767  clear
+  768  cd repo5
+  769  git init
+  770  clear
+  771  ls
+  772  echo "rec1" >> s1.txt
+  773  git add .
+  774  git commit -m "CM1 from master"
+  775  clear
+  776  ls
+  777  git branch
+  778  git switch -c feature1
+  779  git branch
+  780  git switch master
+  781  clear
+  782  git branch
+  783  git branch feature2
+  784  git branch
+  785  git checkout -b feature3
+  786  git switch master
+  787  clear
+  788  git branch
+  789  git switch feature1
+  790  git log --oneline
+  791  git switch master
+  792  git log --oneline
+  793  ls
+  794  cat  s1.txt
+  795  git switch feature1
+  796  ls
+  797  cat s1.txt
+  798  git log --oneline
+  799  echo "rec1" >> w1.txt
+  800  ls
+  801  git log --oneline
+  802  git add .
+  803  git commit -m "CM1 from feature1"
+  804  git log --oneline
+  805  ls
+  806  git switch master
+  807  ls
+  808  git log --oneline
+  809  clear
+  810  git merge feature1
+  811  git log --oneline
+  812  ls
+  813  git branch
+  814  git log --oneline
+  815  git switch feature2
+  816  ls
+  817  ls
+  818  clear
+  819  git switch master
+  820  ls
+  821  git switch -c tempbranch1
+  822  ls
+  823  git switch master
+  824  git switch -c tempbranch2
+  825  git switch master
+  826  git log --oneline
+  827  clear
+  828  git switch tempbranch1
+  829  ls
+  830  echo "rec2 from tempbranch1" >> f1.txt
+  831  git add .
+  832  git commit -m "CM1 from tempbranch1"
+  833  ls
+  834  git switch master
+  835  git switch tempbranch1
+  836  ls
+  837  echo "rec2 from tempbranch1" >> s1.txt
+  838  git add .
+  839  git commit -m "CM2 from tempbranch1"
+  840  git switch master
+  841  git log --oneline
+  842  git merge tempbranch1
+  843  git status
+  844  git log --oneline
+  845  git switch tempbranch2
+  846  ls
+  847  echo "rec2 from tempbranch2" >> s1.txt
+  848  cat s1.txt
+  849  git add .
+  850  git commit -m "CM1 from tempbranch2"
+  851  git log --oneline
+  852  git switch master
+  853  git merge tempbranch2
+  854  cat s1.txt
+  855  vi s1.txt
+  856  git add .
+  857  git commit -m "Removed Merge Conflict from tempbranch2"
+  858  git status
+  859  ls
+  860  cat s1.txt
+  861  git log --oneline
+  862  history
+	
+	
+	NEXT ::: 
+		
+		rebase 					==> Local repo 		
+		
+		stash 
+		
+		
+		fetch / pull			==> Remote repo 
+		
+########
+DAY-5
+########
+		
+		Git Branches 
+		
+			git Rebase 
+			
+			git squash
+			
+			git cherry-pick 
+			
+			git stash 
+			
+		
+
+		Multiple branches ::::
+		
+		master		- cm1 
+					git merge feature1
+						cm1,f1cm1,f1cm2,f1cm3
+						
+					#git merge feature2 
+					#	cm1,f2cm1,f2cm2,f2cm3,f1cm1,f1cm2,f1cm3
+					
+					
+			feature1	--> cm1,f1cm1,f1cm2,f1cm3
+			
+			feature2	--> cm1,f2cm1,f2cm2,f2cm3
+					git rebase master
+						cm1,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3
+						
+		Local repo. between branches
+			
+			
+			
+			Local Repo							<=====>										Remote Repo 
+			
+			fetch / pull 
+			
+			
+		Squash :
+		
+		master :::	cm1,f1.1,2,3,4,5,6,7,8,9,.............,100,f2.1,2,3,4,5,6,7,8,9,.............,100
+		
+					cm1,fv1.1,fv2.1
+					
+		
+			feature1	cm1,f1.1,2,3,4,5,6,7,8,9,.............,100 - fv1.1
+			
+			feature2 	cm1,f2.1,2,3,4,5,6,7,8,9,.............,100 - fv2.1
+			
+			
+		Squash is used to combine more than one commit point into one.
+		
+		
+			Before Merge :: ---> While working in current branch.
+			
+				developer1 == task -- 2 functions 
+				
+					sample.java ===> 	func1.1,2,3,4,5,6,7,8,9,func2.1,2,3,4,5,6,7,8,9
+					
+										func1v1.0,func2v1.0
+										
+					git rebase -i HEAD~9
+			
+			
+			While Merging ::
+			
+				master -- cm1
+				
+					feature1 -- cm1,func1.1,2,3,4,5,6,7,8,9
+					
+				switch to master 
+					
+					git merge --squash feature1 
+		
+			git cherry-pick <commit_id>   		==> used to merge any specific commit
+			
+			git cherry-pick <commit_id1> <commit_id2>
+		
+		merge, rebase, pull, cherry-pick 			====> 	doing the same 
+		
+		
+		git reflog ===> 
+		
+		git log 
+
+
+	git stash :::
+	
+	master 					cm1 
+	
+		feature1	==> cm1,f1m1,2,3,4,5,6,.......
+		
+		adhoc-change ===>  cm1,........
+		
+		
+	git stash  ====> It will save the uncommitted change into a temporary area.
+		
+	stash apply vs pop
+
+Stash current work:
+git stash
+
+Saving stashes with a message: 
+git stash save "<Stashing Message>"
+
+Check the stored stashes: 
+git stash list
+
+Re-apply the changes that you just stashed 
+git stash apply
+
+Track the stashes and their changes: 
+git stash show
+
+Re-apply the previous commits: 
+git stash pop
+
+Delete a most recent stash from the queue: 
+git stash drop
+
+Delete all the available stashes at once: 
+git stash clear
+
+Stash work on a separate branch: 
+git stash branch <branch name>
+
+Remote Repository ::::
+
+			github :::
+			
+
+  509  cd DCP-Feb6-Batch/
+  510  ls
+  511  clear
+  512  mkdir trepo1
+  513  cd trepo1/
+  514  git init
+  515  clear
+  516  ehco "rec1" >> file1.txt
+  517  echo "rec1" >> file1.txt
+  518  git add .
+  519  git commit -m "CM1"
+  520  clear
+  521  git status
+  522  ls
+  523  clear
+  524  git log --oneline
+  525  git branch feature1
+  526  git branch feature2
+  527  git switch feature1
+  528  git log --oneline
+  529  echo "rec1" >> a1.txt
+  530  git add .
+  531  git commit -m "CM1 from feature1"
+  532  echo "rec1" >> a2.txt
+  533  git add .
+  534  git commit -m "CM2 from feature1"
+  535  clear
+  536  ls
+  537  git log --oneline
+  538  git switch master
+  539  git merge feature1
+  540  clear
+  541  git log --oneline
+  542  git switch feature2
+  543  echo "rec1" >> w1.txt
+  544  git add .
+  545  git commit -m "CM1 from feature2"
+  546  clear
+  547  git log --oneline
+  548  git switch master
+  549  git log --oneline
+  550  git switch feature2
+  551* git rebase mast
+  552  git log --oneline
+  553  git switch master
+  554  git merge feature2
+  555  git log --oneline
+  556  clear
+  557  git branch
+  558  cd ..
+  559  mkdir trepo2
+  560  cd trepo2
+  561  clear
+  562  git init
+  563  echo "rec1" >> f1.txt
+  564  git add .
+  565  git commit -m "cm1 from master"
+  566  clear
+  567  git branch feature1
+  568  git branch feature2
+  569  git switch feature1
+  570  echo "rec1" >> s1.txt
+  571  git add .
+  572  git commit -m "CM1 from feature1"
+  573  clear
+  574  echo "rec1" >> s2.txt
+  575  git add .
+  576  git commit -m "CM2 from feature1"
+  577  echo "rec1" >> s3.txt
+  578  git add .
+  579  git commit -m "CM3 from feature1"
+  580  echo "rec1" >> s4.txt
+  581  git add .
+  582  git commit -m "CM4 from feature1"
+  583  echo "rec1" >> s5.txt
+  584  git add .
+  585  git commit -m "CM5 from feature1"
+  586  clear
+  587  ls
+  588  git log --oneline
+  589  git rebase -i HEAD~5
+  590  git log --oneline
+  591  ls
+  592  git switch master
+  593  ls
+  594  git switch feature2
+  595  ls
+  596  clear
+  597  ls
+  598  echo "rec1" >> e1.txt
+  599  git add .
+  600  git commit -m "CM1 from feature2"
+  601  echo "rec1" >> e2.txt
+  602  git add .
+  603  git commit -m "CM2 from feature2"
+  604  echo "rec1" >> e3.txt
+  605  git add .
+  606  git commit -m "CM3 from feature2"
+  607  echo "rec1" >> e4.txt
+  608  git add .
+  609  git commit -m "CM4 from feature2"
+  610  git log --oneline
+  611  git switch master
+  612  git merge --squash feature2
+  613  git status
+  614  git commit -m "Combined commits from feature2"
+  615  git status
+  616  git log --oneline
+  617  ls
+  618  git switch feature1
+  619  git log --oneline
+  620  echo "rec1" >> g1.txt
+  621  git add .
+  622  git commit -m "CM1 from feature1"
+  623  echo "rec1" >> g1.txt
+  624  git add .
+  625  git commit -m "CM2 from feature1"
+  626  clear
+  627  git log --oneline
+  628  git swithch master
+  629  git switch master
+  630  clear
+  631  git switch feature1
+  632  git log --oneline
+  633  git rebase master
+  634  git log --oneline
+  635  git switch master
+  636  ls
+  637  git log --oneline
+  638  git cherry-pick ac3abc3
+  639  ls
+  640  git log --oneline
+  641  clear
+  642  git branch
+  643  git status
+  644  git switch feature2
+  645  git status
+  646  clear
+  647  echo "rec1" >> t1.txt
+  648  git add .
+  649  echo "rec1" >> t1.txt
+  650  git add .
+  651  git add .
+  652  git status
+  653  git switch -c feature3
+  654  git status
+  655  git switch feature2
+  656  git status
+  657  git stash
+  658  git status
+  659  ls -a
+  660  git stash list
+  661  echo "rec1" >> l1.txt
+  662  git add .
+  663  git status
+  664  git stash
+  665  git stash list
+  666  echo "rec1" >> l2.txt
+  667  git add .
+  668  git stash save "stash created for l2.txt"
+  669  git stash list
+  670  ls
+  671  git status
+  672  git stash apply
+  673  git status
+  674  git stash list
+  675  git commit -m "CMc"
+  676  git status
+  677  ls
+  678  git stash drop
+  679  git stash list
+  680  git stash pop
+  681  git status
+  682  git stash list
+  683  git stash show
+  684  git status
+  685  git stash
+  686  git status
+  687  git stash list
+  688  git stash show stash@{1}
+  689  git stash show stash@{0}
+  690  git stash clear
+  691  git stash list
+  692  git status
+  693  clear
+  694  echo "rec1" >> file1.txt
+  695  git add .
+  696  vi file1.txt
+  697  ls
+  698  git status
+  699  vi file1.txt
+  700  git add .
+  701  git stash branch temp-feature2
+  702  git status
+  703  git stash branch tempfeature2
+  704  clear
+  705  git commit -m "adfasd"
+  706  git status
+  707  clear
+  708  git branch
+  709  echo "rec" >> file4.txt
+  710  git add .
+  711  git stash branch b1
+  712  git stash
+  713  git stash branch b1
+  714  clear
+  715  git status
+  716  git commit -m "backup of feature2"
+  717  git branch
+  718  git stash list
+  719  clear
+  720  history
+
+
+Summary :::
+
+			Git Branches 
+		
+				git Rebase 
+			
+				git squash
+			
+				git cherry-pick 
+			
+			git stash 
+			
+			github remote repo -- 
+					repo creation
+					pull request
+					
+########
+DAY-11
+########
+
+		How to use git local & remote repos :
+		
+		clone
+		
+		push
+		
+		fetch
+		
+		pull 
+		
+		git remote 
+		
+
+	Working on Local & remote Repositories :
+	
+	
+	Requirement::
+	
+		- New service 
+		- Change Request 
+		- Bug Fix
+
+- New service :		
+	Dev-Environment ---> VS Code / Eclipse based IDEs ---> Commit the src code to local SCM Repository --> Remote Repository
+
+		
+		git init 
+		
+		push to remote repo 
+
+
+
+- Change Request 
+- Bug Fix	
+		 
+	Dev-Environment ---> VS Code / Eclipse based IDEs ---> Clone/pull Remote Repository into local repository --> Make Changes 
+																							---> Push the changes back to Remote Repository
+	
+
+GITHUB Credentials
+
+	Login ID :
+	
+	Token :
+	
+	To Create a Access token from account setting 
+	
+	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
+	
+	
+	git clone			==> Is to copy the remote repo in to local repo  
+	
+	git remote -v 		==> List the remote repository linked to local repo 
+	
+	git remote add 		==> Add/Link a remote repo to Local Repo 
+	
+	git remote remove 	==> remove remote repo from local 
+	
+	git push			==> Used to update the remote repository with incremental changes from local repo.
+	
+	git fetch 			==> Used to check for any incremental changes in remote repo.
+							It will update the changes in local repo.
+							It will NEVER update working directory.
+
+	git pull			==> Check for any incremental changes in remote repo.
+							It will update the changes in local repo and working Directory.
+							(fetch + merge)
+			
+	Best Practise : Always issue pull command before push command 
+					Always rebase current branch before merge to target branch
+	
+	
+	fork ?
+	
+		Fork vs Clone ????
+	
+	Fork				==> Remote repository command used to copy/backup up remote repositories within remote server.
+	Clone				==> Local repository command used to clone/copy/backup up remote repositories into Local Machine/repo.
+	
+	
+	Microservice1 ==> Userlogin-module				Fork 			backup of Userlogin-module-repo (master)
+		
+	Remote Repository : 	
+		Userlogin-module-repo (master)				awscodecommit		github_repo
+	
+	
+	
+	Microservice2 ==> Adminlogin-module
+	Remote Repository : 	
+		Adminlogin-module-repo (master)	
+
+
+	Remote Repository :::
+	
+		github
+		gitlab
+		awscodecommit
+		az-repo
+		gcp-repo
+		bitbucket
+	
+	VM -> install git 
+			Define a very strong git workflow and branching strategies
+			
+	
+	Local Repository :::
+		git bash -- CLI 
+		git GUI
+		
+Summary :::
+
+		Git Branching Strategies
+		git Workflow 
+		Misc Local and remote git repo commands 
+
+
+Jenkins_Module ::::
+
+		Jenkins - 	Is a build orchestration Tool 
+				-	Master / Slave Architecture
+
+		Jenkins :
+		
+			DevOps 			---> Own Jenkins Servers -- 
+									-	Installation
+									- 	Upgrade
+									-	Security Patch updates
+									-	Allow User Access
+									-	Create Access Control 
+									-	Plugin Management
+									-	Security Management
+									-	Tools Management
+									-	User Management 
+									-	Slave/Node/Agent Management 
+									
+									-	Create CI/CD Pipeline Jobs 
+									-	Automation of End-to _End Product Delivery 
+									-	Alerts & Notifications
+									
+			Developers 		---> Consumers 
+									-	Run the CI/CD Pipeline Jobs
+									-	Check for the CI/CD Pipeline Jobs Status
+									
+		Properties of Jenkins :::
+		
+			Automate end-to-end CI/CD 
+		
+		Jenkins Master 	==> VM - Install Jenkins Tool 
+		
+			Java_Web_App Team :: 
+				
+				Understand how thier appln is built
+					What are the build tools they use 
+					How they use (What are the build parameters, and dependencies)
+		
+			VM - Install the the build tools to Java_Web_App_Project
+			
+		Master/Slave Architecture ::::
+		
+		Jenkins_Master ::	- Just for Creating, Managing and scheduling CI/CD Pipeline Jobs  	- Acts as a controller Server
+		
+			Jenkins-slave1	-  (Install the the build tools to Java_Web_App_Project)			- Acts as Build Server 
+			Jenkins-slave1.1-  (Install the the build tools to Java_Web_App_Project)			- Acts as Build Server
+			Jenkins-slave2	-  (Install the the build tools to Python_Web_App_Project)			- Acts as Build Server 		
+			Jenkins-slave3	-  (Install the the build tools to NodeJS_Web_App_Project)			- Acts as Build Server
+			Jenkins-slave4	-  (Install the the build tools to Angular_Web_App_Project)			- Acts as Build Server
+			Jenkins-slave5	-  (Install the the build tools to .Net_Web_App_Project)			- Acts as Build Server
+			Jenkins-slave6	-  (Install the the build tools to Java_Spring_Boot_Web_App_Project)- Acts as Build Server
+			
+		
+		Build Tool --> Compile the src code and create artifacts!
+						Maven, gradle, ANT
+						
+		
+		SSH Shell Connection!
+		
+		How to Install Jenkins ::: 
+		
+		Jenkins_Master ::	- 	Just for Creating, Managing and scheduling CI/CD Pipeline Jobs  	- Acts as a controller Server		
+			Jenkins-slave1	-   (Install the the build tools to Java_Web_App_Project)				- Acts as Build Server 
+
+Jenkins Work flow ::::
+
+CD/CD pipeline 
+
+Developer ::: 
+	Continuous Coding ---> Commit the changes to scm repo.
+	
+
+Jenkins Pipeline ::
+
+	Checkout the code from SCM 
+	
+	Build 
+	
+	Create Artifacts 
+	
+	Deploy to target Environment (QA / UAT / PROD)
+
+Non-Prod Environment									Production Environment 
+QA/UAT/Pre-Prod											Prod 
+
+Jenkin-Master											Jenkin-Master(Prod)
+	Jenkins_slave :											Deployment Tools
+	
+	Checkout the code from SCM 	
+	Build 
+	Create Artifacts 	
+	Deploy to target Environment (QA / UAT)
+	
+	
+	
+Non-Prod & Prod 
+
+Jenkins-Master
+	Slaves	
+
+		
+Installation of Jenkins :::
+
+	Default path :: /var/lib/jenkins 
+		
+		
+	Jenkins_Master : Windows (Local)
+		Slave1  - AWS
+ 		Slave2  - AZ
+		
+		
+		
+	Jenkins_Master : AWS Linux 				external IP 
+		Slave1  - AWS Linux 
+ 		Slave2  - Windows 	
+
+
+Configuration!
+
+	Plugins Management :::
+			
+			Plugins are extensions to Jenkins  email_Notification Plugin
+			
+			
+			
+		Install - Plugin - Maven(build tool) ==> build and create artifacts 
+		Available tab == installs latest version 
+		
+		
+		Plugins Management :::
+			
+			Update
+			Available 
+			Installed 
+			Advanced 
+			
+			
+		Jenkins_Master :
+		
+				cicd_job1,2,3,4,5,6,7,8,9
+				
+				Dev		
+				QA
+				UAT 
+		
+		Credential Management :::
+		
+			github token ???
+			
+			clone url --> git clone 
+			
+			github userid
+			github access token
+		
+		
+		
+		Types of Jobs ::
+		
+			Freestyle Project/Job 		== Manual Configuration
+				For Testing the plugins/tools during upgrade!
+				To test some scripts or remote server conn.
+				
+			Pipeline Project/Job		== Scripts (groovy)
+		
+		Variables!
+			Environment Variables	==> Keyword 
+			User Defined Variables	==> Dynamic inputs
+			
+		Create a Deployment Job :::
+		
+		
+		Dev Envi. created artifact *.war -- QA, UAT, Pre-prod & PROD
+		
+		Jenkins Job :: 
+
+######	
+DAY-12
+######	
+	
+		Installed Jenkins 
+		Manage Jenkins 
+		Created freestyle project!!!
+		
+		Configuration of Jenkins Master:
+		Pipeline Project ::
+		Jenkins Slave Configuration
+		CI/CD 
+		Deployment to target envi.
+		
+		Jenkin is a service -- which runs in port 8080
+		
+		
+		Jenkins 
+		
+			Free Project 
+			
+			Pipeline Projects 
+			
+			Jenkins Pipelines are created using Groovy Sripts 
+			
+				Scripted Pipeline 
+				
+				Declarative Pipeline
+				
+				
+			Pipeline ::
+			
+				Stages 
+					steps 
+			
+			
+			build, unit Test, create artifacts, deploy to QA 
+
+			
+pipeline {
+        
+	agent {
+        label 'javaslave1'
+    }
+
+    stages {
+        stage('SCM-CHECKOUT') {
+            steps {
+                echo 'Hello World'
+				echo 'Hello World'
+            }
+        }
+        stage('BUILD') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('DEPLOY TO QA SERVER') {
+            steps {
+                echo 'Hello World'
+            }
+        }		
+    }
+}
+
+
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+    }
+}
+			
+			
+node {
+    def mvnHome
+    stage('Preparation') { // for display purposes
+        // Get some code from a GitHub repository
+        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        // Get the Maven tool.
+        // ** NOTE: This 'M3' Maven tool must be configured
+        // **       in the global configuration.
+        mvnHome = tool 'M3'
+    }
+    stage('Build') {
+        // Run the maven build
+        withEnv(["MVN_HOME=$mvnHome"]) {
+            if (isUnix()) {
+                sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            } else {
+                bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+            }
+        }
+    }
+    stage('Results') {
+        junit '**/target/surefire-reports/TEST-*.xml'
+        archiveArtifacts 'target/*.jar'
+    }
+}
+			
+			
+			
+			
+		Best Practise :::
+				Do NOT Code the pipeline scripts with in the job. 
+				
+		For Easy Management ::: 
+			Always maintain the ci/cd pipeline scripts in a Remote GIT Repo.
+			
+			
+			
+			
+		Config Slave Machine!!!!
+		
+		Jenkins_Master 
+		
+			Jenkins_Slave1	==> Build -- Java_Maven_Web_application Build -- Automated Unit Testing -- Create Artifact
+								
+								git,jdk,maven-build Tool
+
+			
+		SSH Connection 	
+		
+			Create a user in slave1, password or sshkey 
+			
+			Configure Slave Machine in Jenkins_Master!!
+			
+
+########
+DAY-9
+########			
+			Jenkins-Master & Slave 
+			
+			CI/CD Pipeline :::
+			
+			Build & Artifacts 
+			
+			MAVEN --> Build (Compile & create artifacts, Unit Testing)
+			
+			New Project - VS Code -- JAVA MAVEN APPLN. -- Push the src to remote repo
+			CR / Bugfix 
+			
+			Maven Project ---> pom.xml file 
+								- Contains the dependencies and plugins.
+			
+			
+		*.exec 
+		
+		*.war / *.jar / *.dll /
+		
+	New Project - VS Code -- JAVA MAVEN APPLN. -- Push the src to remote repo
+		
+		Jenkins_Pipeline : 
+			SCM_Checkout --> Build --> Create Artifacts --> Deploy to Test-Server 
+		
+		Deployment --> process of copying the artifact to target servers - QA/UAT/PROD
+		
+		Jenkins_Master				Slave1				QA-Server
+
+		Slave1 (*.war) 								QA-Server	 Computing Machine (H/W)	
+														Application Server (S/W) 
+															Eg.: Tomcat, Nginx
+
+		target/mvn-hello-world.war					/opt/tomcat/webapps/mvn-hello-world.war
+
+Jenkins Pipeline CI/CD ::
+
+scm-checkout --> build --> deployed to QA --> UAT --> PROD 
+	
+	post build action (send email) 
+		success
+		failure 
+
+
+
+Email Notifications :::
+
+
+
+
+Build Triggers ::::
+
+	Build Periodic
+		
+		Trigger Jenkins Jobs for every day 9AM !!!
+		
+		In this case, Build Periodic will trigger the job for every 4 hours, irrespective of SCM Change.
+
+Based on SCM Code Changes :
+* GIT Should be install in Jenkins Master 
+	
+	Poll SCM
+	
+		DEV Team ::: continuous development ---> Commit src to remote repo.
+
+		Test cycle runf for every 4hr. once
+		
+		In this case, Poll scm will trigger the job for every 4 hours, ONLY if there is any SCM Change.
+	
+	Github webhook
+	
+		In this case, Github webhook will trigger the job for every commit happen in SCM repo.
+	
+#Github webhook to automatically trigger build pipeline!
+
+#Goto Github Repository setting, 
+Select webhook, 
+
+Click Add Webhook
+
+Enter Jenkins Master URL. eg.:
+http://<public-IP>:8080/github-webhook/
+
+http://35.154.44.76:8080/github-webhook/
+
+Choose the push event and save the webhook configuration
+
+
+
+
+
+
+
+
+pipeline {
+        
+	agent {
+        label 'javaslave1'
+    }
+
+    tools 
+    {
+        maven 'maven-3.8.7'
+    }
+	
+    stages {
+        stage('SCM-CHECKOUT') {
+            steps {
+                echo 'SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('BUILD') {
+            steps {
+                echo 'Maven Build'
+				sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+        }
+        stage('DEPLOY TO QA SERVER') {
+            steps {
+                echo 'Deploy to Tomcat Server'
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }		
+    }
+}			
+			
+			
+pipeline {
+    
+    agent {
+        label 'Slave1'
+    }
+
+    tools 
+    {
+        maven 'Maven-3.8.7'
+    }
+    
+    stages {
+        stage('SCM-Checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+
+            }
+              post {
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "we failed."
+                }
+              }
+			}
+        stage('Build') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+              post {
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed."
+                }
+              }
+			}
+
+        stage('Deploy to QA AppServer') {
+            steps {
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+              post {
+                success {
+                  sh "echo 'Send mail on success'"
+                  //mail bcc: '', body: 'success', cc: '', from: '', replyTo: '', subject: 'success', to: 'dummyid@gmail.com'
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "we passed."
+                }
+                failure {
+                  sh "echo 'Send mail on failure'"
+                  mail to:"dummyid@gmail.com", from: 'dummyid@gmail.com', subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "we failed."
+                }
+              }	
+		}
+    }
+}
+	
+		
+########
+DAY-10
+########
+
+		Configuration Management System! using Ansible.
+		
+		
+		Infra-Structure ::: Team will provision the infra(VMs)
+		Shell Scripts!!!
+		python
+		Ansible  -- yaml scripts 
+		Terraform -- HCL Scripts 	
+		
+		Shd be resuable:
+		
+		CMT 
+		
+		IAC -> Infra-Structure as Code :::
+
+		Terraform		-->		Provision Infra-Structure		
+		Ansible			-->		Configuration of Servers (tools and package Management)
+								Used Deployment 
+
+		git --> remote git servers .
+										-- gitOps.
+										
+										
+	Ansible Demo :::
+	
+		Jenkins_Master 	
+			Slave			SSH-Keys -- private/public
+			
+		Ansible_Controller  --> Managed by Infra-Support Team	private keys
+			Dev1,2,3,4,5,6,7,8,9,10										private/public
+				ansibleadmin -- password
+				
+			Node1
+			Node2
+			
+	Ansible :		
+		DEV_Team 
+				Dev1,2,3,4,5,6,7,8,9,10
+		
+		
+		
+	Ansible doesn't need any agent, it used push mechanism to exec any module in target server
+		
+		
+#######
+DAY-11
+#######
+
+			Write Ansible Playbooks!!!
+			
+				yaml 
+				
+				
+			step 1 : install service 
+			step 2 : start service 
+			
+			
+		pre-requisties 
+		install
+		start 
+		do post install ativities like configs 
+		
+		
+		
+	Ansible Roles ::::
+
+
+	Scripts ==> yaml ==> organized ==> reusable ==> Share
+	
+	Ansible Roles!!!!!
+		
+
+#######
+DAY-12
+#######
+
+	Docker Container!
+
+
+		Virtual Machines ===> Cloud Platforms
+		
+		Hypervisor and config VMs 
+		
+		
+		
+		VM --> Computing Device -- Hardware/Software 
+		
+		
+		
+	Jenkins_Master 
+		Build_Servers
+			Jenkins_Slave1	 java 
+			Jenkins-slave2 		.net 
+			Jenkins-slave3 python 
+			Jenkins_Slave4	
+			Jenkins-slave5
+			Jenkins-slave6
+
+
+
+
+
+	Container :::
+		
+	Infra-Structure 
+
+		Jenkins_Master  VM 
+			Slave_Build_Server 		VM   -- Install Docker Engine -- Container1,2,3,4,5,6,7,........50
+
+	
+	Development Perspectives :
+		Dev_Envi. ==> create the src code -- build -- create artifacts (*.war) ==> jdk1.8,tomcat8 
+		
+						package the service : (*.war,jdk1.8,tomcat8) -- Image1 
+		
+		Deploy to target servers 
+		
+		QA -- VM --					Image1 (*.war,jdk1.8,tomcat8) -- Container to run the application.
+		UAT 
+		PROD 
+		
+	Container :
+	Image 
+	Docker Container Engine 
+	
+	
+	Install Docker Engine.
+	
+	
+	Container run command Modes :
+	
+		detached mode 				--- Background
+		
+		attached mode 				--- foreground (default)
+		
+		interactive mode			--- 
+
+		
+	Application :::
+	
+		Stateless applications ===> runs inside the container
+		
+		Stateful Applications ===> runs inside the container -- it create some output - file/report/log 
+		
+		
+	svc1 - user_registration_Module ---> --> user/id/pwd -- stored inside the container 
+	
+	Volume!!!! ---> Host Volume.
+	
+	svc2 - Login ---> 
+	
+	
+	Monitoring Tool - monitor the user access ==> container >>> 
+	
+	Volume!!!! ---> Host Volume.
+	
+#######
+DAY-13
+#######
+		Docker commit & build 
+		
+		docker run 
+		
+		microservice :::
+		
+			frontend-container
+			business-functions 
+			backend-container 
+			
+		Docker Compose!
+			used to run multiple containers
+			
+		Write manifest!
+		
+		Container Orchestration Tool :
+		
+			Docker Swarm -- 
+			
+			Kubernetes ---> 
+			
+			
+	
+		VM :::
+				Appln. Image! ---> Container -- tomcat 
+			
+			replicas : 3 
+	
+		VM1 - copy of container1
+		VM2 - copy of container1 
+		VM3 - copy of container1
+	
+		Jenkins Slave - QA-Slave 
+
+#######
+DAY-14
+#######
+
+		Kubernetes 
+			Architecture
+		
+		Terminologies :
+			
+			Kubernetes Master:
+				Kubernetes Cluster :
+					Kubernetes-WorkerNode1
+					Kubernetes-WorkerNode2
+					Kubernetes-WorkerNode3
+		
+		Containers
+		Images
+		Pods
+		Controllers
+			RC
+			RS
+			Deployment 
+			Daemonsets
+			
+		Services 
+		
+		
+		Installation of Kubernetes :::
+		
+		Managed Services :
+			AWS --> EKS
+			AZ  --> AKS
+			GCP --> GKS
+		
+		Open-Source Kubernetes 
+		
+			Kubernetes Master:              - VM
+				Kubernetes Cluster :
+					Kubernetes-WorkerNode1	- VM 
+					Kubernetes-WorkerNode2	- VM 
+					Kubernetes-WorkerNode3  - VM
+		
+		kubeadm 	--> 
+		minikube	-->
+		
+		Pre-requisties :::
+		Install & Config Kubernetes
+
+			
+		Containers
+		Images
+		Pods --->
+		
+			Kubernetes Master:              - VM
+				Kubernetes Cluster :
+					Kubernetes-WorkerNode1	- VM 
+					Kubernetes-WorkerNode2	- VM 
+					
+		
+		kubectl --> 
+		
+		
+		Services :::
+		
+			ClusterIP Services - default 
+			NodePort  --- used to expose the pod to internet.
+			LoadBalancer
+			
+#######
+DAY-15
+#######	
+				
+		Controllers
+			RC
+			RS
+			Deployment 
+			Daemonsets
+			
+		volume 
+			hostpath
+		
+		Replication Controller and Replicasets!
+		
+		RC -- Equality based operator
+		RS -- Set based operator 
+		
+		Daemonsets :::
+		
+		Deployment Controller:::
+		
+	Kubernetes Volumes ::::
+			
+			What is Volumes ?
+			
+			Types of Volumes ?
+		
+		Hostpath!!!!
+	
