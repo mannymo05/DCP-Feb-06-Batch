@@ -1,0 +1,219 @@
+provider "aws" {
+  region     = "ap-south-1"
+  access_key = "AKIA3665QZHNUX4ONKXU"
+  secret_key = "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"
+}
+
+# Create AWS Instance
+
+resource "aws_instance" "feb6-server1" {
+  ami           = "ami-09ba48996007c8b50"
+  instance_type = "t2.micro"
+  key_name      = "loksai-clouduser"
+
+  tags = {
+    Name = "Terraform-feb6-server1"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create AWS Instance
+
+resource "aws_instanceeee" "app_server2" {
+  ami           = "ami-074dc0a6f6c764218"
+  instance_type = "t2.micro"
+  key_name      = "kubeserverkey"
+
+  tags = {
+    Name = "TerraformDemoServer2"
+  }
+}
+
+
+
++ => Add new resource
+~ => update any existing resource
+- => Delete any existing resource
+
+
+
+
+
+
+
+terraform init
+
+terraform plan
+
+terraform apply
+
+terraform destroy
+
+terraform state list
+
+
+
+
+
+*****************************************************************************************
+
+
+
+
+Install Terraform --> Local Windows Machine!!!
+
+Use Command prompt to run Terraform commands like : terraform init, terraform plan, terraform apply, etc..
+
+Create the Config file ?
+
+Visual Studio Code  to create or develop Terraform Config files! i.e., *.tf files 
+
+
+provider "aws" {
+  region     = "ap-south-1"
+  access_key = "AKIA3665QZHNUX4ONKXU"
+  secret_key = "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"
+}
+
+# Create VPC
+
+resource "aws_vpc" "myvpc2" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "myvpc2"
+  }
+}
+
+# Create Subnet 
+
+resource "aws_subnet" "mysubnet2" {
+  vpc_id     = aws_vpc.myvpc2.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "mysubnet2"
+  }
+}
+
+# Internet Gateway
+
+resource "aws_internet_gateway" "mygw2" {
+  vpc_id = aws_vpc.myvpc2.id
+
+  tags = {
+    Name = "mygw2"
+  }
+}
+
+# Route Table
+
+resource "aws_route_table" "myrt2" {
+  vpc_id = aws_vpc.myvpc2.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.mygw2.id
+  }
+
+  tags = {
+    Name = "myrt2"
+  }
+}
+
+# Route Table Association
+
+resource "aws_route_table_association" "myrta2" {
+  subnet_id      = aws_subnet.mysubnet2.id
+  route_table_id = aws_route_table.myrt2.id
+}
+
+# Security Groups
+
+resource "aws_security_group" "mysg2" {
+  name        = "mysg2"
+  description = "Allow inbound traffic"
+  vpc_id      = aws_vpc.myvpc2.id
+
+  ingress {
+    description      = "HTTP"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description      = "SSH"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
+
+  tags = {
+    Name = "mysg2"
+  }
+}
+
+# Create Instance
+
+resource "aws_instance" "App_server2" {
+  ami           = "ami-09ba48996007c8b50"
+  instance_type = "t2.micro"
+  associate_public_ip_address = true
+  subnet_id = aws_subnet.mysubnet2.id
+  vpc_security_group_ids = [aws_security_group.mysg2.id]
+  key_name = "loksai-clouduser"
+
+  tags = {
+    Name = "Terraform-App_Server2"
+  }
+}
+
+
+resource "aws_instance" "jan31-server1" {
+  ami           = "ami-0e742cca61fb65051"
+  instance_type = "t2.micro"
+  key_name      = "Loksai-aws-key"
+
+  tags = {
+    Name = "jan31-dev-server1"
+  }
+}
+
+CICD Pipeline ::
+
+
+Adhoc :::
+
+scm-checkout --> build --> create docker image ---> publish to docker-hub ---> Provision QA-Server -->
+							run appln container & Test the appln.
+							(Appln. Test failed)
+							
+						---> promote to UAT --> Destroy_QA_Server 
+						
+						
+
